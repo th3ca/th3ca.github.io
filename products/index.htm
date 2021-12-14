@@ -1,0 +1,1231 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>TH3 Yoga & Athletic Wear | Catalog</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="This catalog features our running yoga styles. Choose from a great summer collection of designs and colours.">
+    <meta name="og:image" content="../og_fb.gif">
+    <meta property="fb:admins" content="244490202330641">
+    <style>
+/* base styles */
+@font-face {
+  font-family: 'El Messiri';
+  font-weight: normal;
+  font-display: swap;
+  src: url(../ElMessiri-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'El Messiri';
+  font-weight: bold;
+  font-display: swap;
+  src: url(../ElMessiri-Bold.ttf) format('truetype');
+}
+html, body, h2, p, nav, ul, li, form, figure {margin: 0; padding: 0; border: 0}
+html {scroll-behavior: smooth}
+body {
+  font: 14pt 'El Messiri',helvetica,arial,sans-serif;
+  line-height: 1.5em;
+  background: #fff;
+  color: #000;
+  scroll-behavior: smooth;
+}
+h2 {
+  font-size: 24pt;
+  font-weight: normal;
+  color: #aaa;
+  text-align: center;
+}
+p {margin-bottom: 1em}
+ul, li {list-style: none}
+summary {list-style: none}
+summary::after {content: "\025BE"}
+summary::-webkit-details-marker {display: none}
+nav a {text-decoration: none}
+/* end */
+
+header {
+  position: fixed; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: stretch;
+  align-items: stretch;
+  background: #eee;
+  -webkit-background: radial-gradient(circle at 50%, rgba(238,238,238,0.9) 50%, rgba(210,210,210,0.9));
+  background: radial-gradient(circle at 50%, rgba(238,238,238,0.9) 50%, rgba(210,210,210,0.9));
+  text-transform: uppercase;
+  z-index: 2;
+}
+@media print {header {position: static}}
+
+nav,
+nav > .menu,
+.outerNav {
+  flex: 1;
+}
+
+/* hamburger button layout */
+#menuBtn {
+  position: absolute; 
+  width: 1px; 
+  height: 1px; 
+  overflow: hidden;
+  opacity: 0;
+}
+.hamburger {
+  padding: 5px 10px;
+  font: normal 20pt Arial;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+header.top > #thinMenu,
+header.mid > #tallMenu {display: none}
+
+@media (max-width: 850px) {
+  header.top > #tallMenu {display: none}
+  header.top > #thinMenu {display: flex}
+  #thinMenu .menu {justify-content: center}
+  #thinMenu .menu > li:not(.selected) {display: none}
+  #thinMenu .menu > li > a.selected {
+    color: #999;
+    font-size: 18pt;
+    margin-right: 0;
+  }
+  #openMenu > .logo img {width: 38px; height: 47px}
+}
+
+#menuBtn ~ #openMenu {display: none}
+#menuBtn:checked ~ #openMenu {display: flex}
+#menuBtn:checked ~ #thinMenu,
+#menuBtn:checked ~ #tallMenu {display: none}
+
+#menuBtn:checked ~ #openMenu {animation: slideDown 0.3s ease-out}
+@keyframes slideDown {from {margin-top: -100%} 90% {margin-top: 10px}}
+/* end */
+
+/* header toolbar */
+header nav {padding: 1% 0}
+
+header .logo {margin: 0 3%}
+header .logo * {display: block}
+
+header nav,
+header ul.menu,
+header ul.submenu {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 1;
+}
+
+header .menu > li > a {
+  display: block;
+  letter-spacing: 1px;
+  font-weight: bold;
+  margin-right: 1em;
+  color: #aaa;
+  white-space: nowrap;
+}
+header .menu > li > a.selected {
+  color: #000;
+}
+header .submenu a {
+  display: block;
+  font-size: 12pt;
+  line-height: 1em;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: #000;
+  white-space: nowrap;
+}
+
+#tallMenu > .outerNav {
+  align-self: flex-end;
+}
+#tallMenu .menu {
+  font-size: 24pt;
+  line-height: 1em;
+  margin: 0px 0 15px 0;
+}
+#tallMenu .submenu {
+  display: inline-grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 3px;
+}
+#tallMenu .submenu a {
+  margin-right: 2em;
+}
+
+#thinMenu .menu {
+  font-size: 20pt;
+  line-height: 1em;
+}
+
+#openMenu {
+  overflow: auto;
+  max-height: 100vh;
+  align-items: flex-start;
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.3);
+}
+#openMenu ul.menu {
+  flex-flow: column;
+  align-items: stretch;
+}
+#openMenu ul.menu > li {
+  padding: 0.6em 1em;
+  border-bottom: 1px solid #bbb;
+}
+#openMenu ul.menu > li:last-child {
+  border-bottom: none;
+}
+#openMenu ul.menu > li > a {
+  font-size: 18pt;
+  color: #999;
+}
+#openMenu ul.submenu {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(8em, 1fr));
+  grid-gap: 0.5em 5px;
+  gap: 0.5em 5px;
+  flex: 1;
+  margin-top: 0.5em;
+}
+#openMenu ul.submenu > li > a::before {
+  content: "\02022";
+  padding-right: 0.5em;
+  color: #999;
+}
+/* end */
+
+main {
+  margin: 7em 0 3% 0;
+}
+@media (max-width: 850px) {
+  main {margin-top: 4em}
+}
+    </style>
+<!-- Google Analytics -->
+<script>
+try { if(localStorage["ga-out"] > 1) throw 2; }
+catch(e) { window["ga-disable-UA-50470471-1"] = true; }
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config","UA-50470471-1",{anonymize_ip:true});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-50470471-1"></script>
+<!-- Google Analytics -->
+  </head>
+  <body>
+    <header class="mid">
+      <input id=menuBtn type=checkbox tabindex="-1">
+      <nav id=thinMenu>
+        <div class=logo><a href="https://www.th3.ca"><img src="../logo_serif.png" width=38 height=47 border=0 alt=TH3></a></div>
+        <ul class=menu>
+          <li><a href="../">Headlines</a></li>
+          <li class=selected><a href="." class=selected>Catalog</a></li>
+          <li><a href="../technology/">Technology</a></li>
+        </ul>
+        <label for=menuBtn class=hamburger taxindex=0 role=button aria-label=Expand>&equiv;</label>
+      </nav>
+
+      <nav id=tallMenu>
+        <div class=logo><a href="https://www.th3.ca"><img src="../logo_serif.png" width=76 height=94 border=0 alt=TH3></a></div>
+        <div class=outerNav>
+          <ul class=menu>
+            <li><a href="../">Headlines</a></li>
+            <li class=selected><a href="." class=selected>Catalog</a></li>
+            <li><a href="../technology/">Technology</a></li>
+          </ul>
+        </div>
+        <label for=menuBtn class=hamburger tabindex=0 role=button aria-label=Expand>&equiv;</label>
+      </nav>
+
+      <nav id=openMenu>
+        <div class=logo><a href="https://www.th3.ca"><img src="../logo_serif.png" width=76 height=94 border=0 alt=TH3></a></div>
+        <ul class=menu>
+          <li>
+            <a href="../">Headlines</a>
+            <ul class=submenu>
+              <li><a href="../#outdoors">Outdoors</a></li>
+              <li><a href="../#categories">Categories</a></li>
+              <li><a href="../#fabrics">Fabrics</a></li>                
+            </ul>
+          </li>
+
+          <li>
+            <a href=".">Catalog</a>
+            <ul class=submenu onclick="$('menuBtn').checked=false;">
+              <li><a href="?type=crop" onclick="return selectCat(this.href);">Crop Tops</a></li>
+              <li><a href="?type=tank" onclick="return selectCat(this.href);">Tank Tops</a></li>
+              <li><a href="?type=shirt" onclick="return selectCat(this.href);">T-Shirts</a></li>
+              <li><a href="?type=sleeve" onclick="return selectCat(this.href);">Long Sleeves</a></li>
+              <li><a href="?type=jack" onclick="return selectCat(this.href);">Jackets</a></li>
+              <li><a href="?type=short" onclick="return selectCat(this.href);">Shorts</a></li>
+              <li><a href="?type=cap" onclick="return selectCat(this.href);">Capri Pants</a></li>
+              <li><a href="?type=pant" onclick="return selectCat(this.href);">Pants</a></li>
+            </ul>  
+          </li>
+
+          <li>
+            <a href="../technology/">Technology</a>
+            <ul class=submenu>
+              <li><a href="../technology/#performance">Performance</a></li>
+              <li><a href="../technology/#weight">Weight</a></li>
+              <li><a href="../technology/#construction">Construction</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <label for=menuBtn class=hamburger tabindex=0 role=button>&times;</label>
+      </nav>
+    </header>
+
+    <main>
+
+      <style>
+h2 {margin-bottom: 1em}
+.category {padding: 20px}
+.category ul {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(100px, 1fr));
+  grid-gap: 10px;
+  gap: 10px;
+}
+@media (max-width: 900px) {
+  .category ul {
+    grid-template-columns: repeat(4, minmax(50px, 1fr));
+  }
+}
+.category ul > li {
+  max-width: 600px;
+}
+.category a {
+  display: flex;
+  height: 200px;
+  max-height: 40vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-flow: row wrap;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 20pt;
+  text-shadow: 1px 1px 4px #000;
+  border-radius: 15px;
+  border: 1px solid #fff;
+}
+.category a:hover,
+.category a:focus {
+  border-color: #666;
+}
+      </style>
+      <section class=category>
+        <h2>Discover yourself</h2>
+        <ul>
+          <li>
+            <a href="?type=crop" onclick="return selectCat(this.href);" style="background-image:url(../cat_crops.jpg)">Crop Tops</a>
+          </li>
+          <li>
+            <a href="?type=tank" onclick="return selectCat(this.href);" style="background-image:url(../cat_tanks.jpg)">Tank Tops</a>
+          </li>
+          <li>
+            <a href="?type=shirt" onclick="return selectCat(this.href);" style="background-image:url(../cat_tshirts.jpg)">T-Shirts</a>
+          </li>
+          <li>
+            <a href="?type=sleeve" onclick="return selectCat(this.href);" style="background-image:url(../cat_lsleeves.jpg">Long Sleeves</a>
+          </li>
+          <li>
+            <a href="?type=jack" onclick="return selectCat(this.href);" style="background-image:url(../cat_jackets.jpg)">Jackets</a>
+          </li>
+          <li>
+            <a href="?type=short" onclick="return selectCat(this.href);" style="background-image:url(../cat_shorts.jpg); background-position:50% 100%">Shorts</a>
+          </li>
+          <li>
+            <a href="?type=cap" onclick="return selectCat(this.href);" style="background-image:url(../cat_capris.jpg)">Capri Pants</a>
+          </li>
+          <li>
+            <a href="?type=pant" onclick="return selectCat(this.href);" style="background-image:url(../cat_pants.jpg)">Pants</a>
+          </li>
+        </ul>
+      </section>
+
+      <style>
+#filterby {padding-top: 3em}
+#gallery {
+  margin: 2em 5px 0 5px;
+  display: flex;
+  flex-flow: row wrap;
+}
+#single {
+  flex: 2;
+  min-width: 300px;
+  margin: 0 10px;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+#stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3em;
+  margin: 30px 0 5px 0;
+  font-size: 14pt;
+  text-transform: uppercase;
+}
+#stats > a {margin-left: 0.5em}
+#stats img {vertical-align: baseline; margin-bottom: -0.25em}
+#stats > .header {
+  color: #bbb;
+  margin: 0 0.5em;
+}
+#stats > .header:first-child {
+  margin-left: 0;
+}
+#sharelink {
+  text-decoration: none;
+  color: #f00;
+  margin-left: 1em;
+}
+#imagery {
+  flex: 1;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;  
+  background: url(loading.gif) 66% 10% no-repeat;
+}
+#thumbs {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  margin-right: 5px;
+}
+#thumbs > span {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  animation: flashbg 0.6s linear 0s infinite alternate;
+}
+#preview {
+  flex: 1;
+  min-width: 150px;
+  min-height: 800px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 0;
+  cursor: crosshair;
+}
+#list {
+  flex: 3;
+  min-width: 300px;
+  margin: 5px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+@media (min-width: 600px) {
+  #single, #list {min-width: 500px}
+}
+.paginate {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.paginate:first-child {padding-bottom: 1em}
+.paginate:last-child {padding-top: 1em}
+.paginate > strong,
+.paginate > a {
+  text-decoration: none;
+  margin: 5px;
+  padding: 0.1em 0.7em;
+  color: #000;
+  border: 1px solid #000;
+  font-size: 1.2em;
+}
+.paginate > strong {
+  background: #000;
+  color: #fff;
+}
+#items {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5px;
+  gap: 5px;
+  background: url(loading.gif) 50% 20% no-repeat;
+}
+#items > a {
+  display: block;
+  min-width: 100px;
+  height: 300px;
+  background-size: cover;
+  background-position: 50% 10%;
+  background-repeat: no-repeat;
+  animation: flashbg 0.6s linear 0s infinite alternate;
+}
+@keyframes flashbg {
+  from {background-color: #eee} to {background-color: #fff}
+}
+#intro {
+  flex: 2;
+  background: url(thumbs/t6035,p6057,0483,sleeve,pant.jpg) 50% no-repeat;
+  background-size: cover;
+  background-position: 50% 15%;
+  min-width: 250px;
+  min-height: 3em;
+  font-size: 26pt;
+  line-height: 1.1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+  padding: 0 25px;
+  margin: 0 5px;
+}
+      </style>
+
+      <h2 id=filterby>Gallery</h2>
+
+      <section id=gallery>
+        <div id=intro>Complete your wardrobe.</div>
+      
+        <div id=list>
+          <div id=paginate class=paginate></div>
+          <div id=items></div>
+          <div id=paginate2 class=paginate></div>
+        </div>
+      
+        <div id=single style="display: none">
+          <div id=stats>
+            <span class=header>Shirt:</span><span id=shirt></span>
+            <span class=header>Bottom:</span><span id=pants></span>
+            <a href="#" onclick="prompt('Share this link:',this.href);return false;" id=sharelink>&hearts;</a>
+            <a href="#" id=fbshare target="_blank"><img src="../FB-RGB-500.svg" width=20 height=20 border=0 alt="Share on Facebook"></a> 
+            <a href="#" id=twshare target="_blank"><img src="../Twitter_Social_Icon_Circle_Color.svg" width=20 height=20 border=0 alt="Share on Twitter"></a>    
+          </div>
+          <div id=imagery>
+            <div id=thumbs></div>
+            <div id=preview role=img></div>
+          </div>
+        </div>
+      </section>
+      
+<textarea id=db style="display: none">t5001,p5062,2980,tank,pant
+t5001,p5062,2988,tank,pant
+t5001,p5062,2991,tank,pant
+t5001,p5062,2992,tank,pant
+t5001,p5062,2993,tank,pant
+t5001,p5062,3013,tank,pant
+t5001,p5062,3015,tank,pant
+t5001,p5062,3017,tank,pant
+t5001,p5062,3019,tank,pant
+t5001,p5062,3022,tank,pant
+t5002,p5050,2262,tank,pant
+t5002,p5050,2264,tank,pant
+t5002,p5050,2265,tank,pant
+t5002,p5050,2273,tank,pant
+t5002,p5050,2276,tank,pant
+t5002,p5056,2539,tank,pant
+t5002,p5056,2540,tank,pant
+t5002,p5056,2547,tank,pant
+t5002,p5056,2558,tank,pant
+t5002,p5056,2561,tank,pant
+t5004,p5052,2847,crop,pant
+t5004,p5052,2851,crop,pant
+t5004,p5052,2859,crop,pant
+t5004,p5052,2864,crop,pant
+t5004,p5052,2868,crop,pant
+t5005,p5051,0610,tank,pant
+t5005,p5051,0611,tank,pant
+t5005,p5051,0621,tank,pant
+t5005,p5051,0625,tank,pant
+t5005,p5051,0631,tank,pant
+t5005,p5053,0122,tank,pant
+t5005,p5053,0125,tank,pant
+t5005,p5053,0136,tank,pant
+t5005,p5053,0141,tank,pant
+t5005,p5053,0146,tank,pant
+t5005,p5065,2326,tank,cap
+t5005,p5065,2327,tank,cap
+t5005,p5065,2333,tank,cap
+t5005,p5065,2340,tank,cap
+t5005,p5065,2343,tank,cap
+t5007,p5055,3024,sleeve,pant
+t5007,p5055,3025,sleeve,pant
+t5007,p5055,3036,sleeve,pant
+t5007,p5055,3045,sleeve,pant
+t5007,p5055,3046,sleeve,pant
+t5007,p5059,0242,sleeve,pant
+t5007,p5059,0246,sleeve,pant
+t5007,p5059,0251,sleeve,pant
+t5007,p5059,0265,sleeve,pant
+t5007,p5059,0267,sleeve,pant
+t5007,p5059,0271,sleeve,pant
+t5008,p5055,0561,shirt,pant
+t5008,p5055,0565,shirt,pant
+t5008,p5055,0576,shirt,pant
+t5008,p5055,0580,shirt,pant
+t5008,p5055,0585,shirt,pant
+t5008,p5055,0593,shirt,pant
+t5008,p5068,2197,shirt,pant
+t5008,p5068,2198,shirt,pant
+t5008,p5068,2200,shirt,pant
+t5008,p5068,2205,shirt,pant
+t5008,p5068,2210,shirt,pant
+t5009,p5051,0668,sleeve,pant
+t5009,p5051,0670,sleeve,pant
+t5009,p5051,0678,sleeve,pant
+t5009,p5051,0679,sleeve,pant
+t5009,p5051,0690,sleeve,pant
+t5009,p5057,0400,sleeve,short
+t5009,p5057,0411,sleeve,short
+t5009,p5057,0414,sleeve,short
+t5009,p5057,0415,sleeve,short
+t5009,p5057,0418,sleeve,short
+t5010,p5066,3160,tank,cap
+t5010,p5066,3171,tank,cap
+t5010,p5066,3178,tank,cap
+t5010,p5066,3179,tank,cap
+t5010,p5066,3188,tank,cap
+t5011,p5051,0643,sleeve,pant
+t5011,p5051,0646,sleeve,pant
+t5011,p5051,0658,sleeve,pant
+t5011,p5051,0661,sleeve,pant
+t5011,p5051,0667,sleeve,pant
+t5012,p5056,0002,crop,pant
+t5012,p5056,0005,crop,pant
+t5012,p5056,0006,crop,pant
+t5012,p5056,0012,crop,pant
+t5012,p5056,0013,crop,pant
+t5012,p5056,0014,crop,pant
+t5012,p5056,0021,crop,pant
+t5012,p5056,0023,crop,pant
+t5013,p5058,0476,sleeve,pant
+t5013,p5058,0479,sleeve,pant
+t5013,p5058,0487,sleeve,pant
+t5013,p5058,0488,sleeve,pant
+t5013,p5058,0493,sleeve,pant
+t5013,p5058,0496,sleeve,pant
+t5014,p5054,0434,shirt,pant
+t5014,p5054,0437,shirt,pant
+t5014,p5054,0440,shirt,pant
+t5014,p5054,0441,shirt,pant
+t5014,p5054,0444,shirt,pant
+t5014,p5054,0453,shirt,pant
+t5015,p5059,0041,tank,pant
+t5015,p5059,0042,tank,pant
+t5015,p5059,0053,tank,pant
+t5015,p5059,0066,tank,pant
+t5015,p5059,0068,tank,pant
+t5016,p5052,0083,tank,pant
+t5016,p5052,0085,tank,pant
+t5016,p5052,0086,tank,pant
+t5016,p5052,0101,tank,pant
+t5016,p5052,0107,tank,pant
+t5016,p5070,3259,tank,pant
+t5016,p5070,3261,tank,pant
+t5016,p5070,3268,tank,pant
+t5016,p5070,3271,tank,pant
+t5016,p5070,3274,tank,pant
+t5018,p5053,3065,shirt,pant
+t5018,p5053,3067,shirt,pant
+t5018,p5053,3071,shirt,pant
+t5018,p5053,3080,shirt,pant
+t5018,p5053,3083,shirt,pant
+t5018,p5066,3190,shirt,cap
+t5018,p5066,3191,shirt,cap
+t5018,p5066,3194,shirt,cap
+t5018,p5066,3210,shirt,cap
+t5019,p5053,2890,tank,pant
+t5019,p5053,2891,tank,pant
+t5019,p5053,2898,tank,pant
+t5019,p5053,2901,tank,pant
+t5019,p5053,2905,tank,pant
+t5019,p5066,3212,tank
+t5019,p5066,3224,tank
+t5019,p5066,3227,tank
+t5019,p5066,3230,tank
+t5019,p5066,3235,tank
+t5022,p5056,0516,sleeve,short
+t5022,p5056,0518,sleeve,short
+t5022,p5056,0519,sleeve,short
+t5022,p5056,0529,sleeve,short
+t5022,p5056,0535,sleeve,short
+t5023,p5059,0370,shirt,pant
+t5023,p5059,0375,shirt,pant
+t5023,p5059,0385,shirt,pant
+t5023,p5059,0395,shirt,pant
+t5023,p5059,0396,shirt,pant
+t5024,p5059,0341,sleeve,pant
+t5024,p5059,0344,sleeve,pant
+t5024,p5059,0352,sleeve,pant
+t5024,p5059,0356,sleeve,pant
+t5024,p5059,0360,sleeve
+t5024,p5063,0150,sleeve,cap
+t5024,p5063,0151,sleeve,cap
+t5024,p5063,0152,sleeve,cap
+t5024,p5063,0156,sleeve,cap
+t5024,p5063,0163,sleeve,cap
+t5024,p5063,0180,sleeve,cap
+t5024,p5063,0182,sleeve,cap
+t5024,p5063,0192,sleeve,cap
+t5026,p5059,0317,sleeve,pant
+t5026,p5059,0326,sleeve,pant
+t5026,p5059,0332,sleeve,pant
+t5026,p5059,0337,sleeve,pant
+t5026,p5059,0340,sleeve,pant
+t5027,p5059,0290,sleeve,pant
+t5027,p5059,0291,sleeve,pant
+t5027,p5059,0303,sleeve,pant
+t5027,p5059,0310,sleeve,pant
+t5027,p5059,0312,sleeve,pant
+t5028,p5069,2781,jack,cap
+t5028,p5069,2785,jack,cap
+t5028,p5069,2796,jack,cap
+t5028,p5069,2803,jack,cap
+t5028,p5069,2806,jack,cap
+t5028,p5070,0196,jack,pant
+t5028,p5070,0197,jack,pant
+t5028,p5070,0200,jack,pant
+t5028,p5070,0209,jack,pant
+t5028,p5070,0225,jack,pant
+t5029,p5058,2617,tank,pant
+t5029,p5058,2619,tank,pant
+t5029,p5058,2629,tank,pant
+t5029,p5058,2630,tank,pant
+t5029,p5058,2636,tank,pant
+t5029,p5066,3238,tank
+t5029,p5066,3240,tank
+t5029,p5066,3245,tank
+t5029,p5066,3249,tank
+t5029,p5066,3252,tank
+t5030,p5066,3115,tank,cap
+t5030,p5066,3124,tank,cap
+t5030,p5066,3128,tank,cap
+t5030,p5066,3131,tank,cap
+t5030,p5066,3137,tank,cap
+t5031,p5070,2694,jack,pant
+t5031,p5070,2696,jack,pant
+t5031,p5070,2701,jack,pant
+t5031,p5070,2710,jack,pant
+t5032,p5070,2716,crop,pant
+t5032,p5070,2717,crop,pant
+t5032,p5070,2724,crop,pant
+t5032,p5070,2728,crop,pant
+t5032,p5070,2731,crop,pant
+t5033,p5067,2469,crop,short
+t5033,p5067,2473,crop,short
+t5033,p5067,2481,crop,short
+t5033,p5067,2483,crop,short
+t5033,p5067,2486,crop,short
+t5034,p5056,3093,sleeve,pant
+t5034,p5056,3095,sleeve,pant
+t5034,p5056,3098,sleeve,pant
+t5034,p5056,3106,sleeve,pant
+t5034,p5056,3109,sleeve,pant
+t6000,p6056,0352,tank,pant
+t6000,p6056,0355,tank,pant
+t6000,p6056,0362,tank,pant
+t6001,p6070,0185,tank,pant
+t6002,p6050,0101,tank,cap
+t6002,p6050,0115,tank,cap
+t6002,p6050,0116,tank,cap
+t6004,p6054,0221,tank,pant
+t6004,p6054,0222,tank,pant
+t6004,p6054,0223,tank,pant
+t6005,p6074,0031,tank,pant
+t6005,p6074,0041,tank,pant
+t6005,p6074,0042,tank,pant
+t6005,p6074,0044,tank,pant
+t6005,p6074,0045,tank,pant
+t6007,p6081,0282,tank,pant
+t6007,p6081,0285,tank,pant
+t6007,p6081,0287,tank,pant
+t6008,p6055,0381,tank,pant
+t6008,p6055,0383,tank,pant
+t6008,p6055,0384,tank,pant
+t6008,p6055,0385,tank,pant
+t6008,p6055,0390,tank,pant
+t6009,p6075,0304,tank,pant
+t6009,p6075,0306,tank,pant
+t6009,p6075,0308,tank,pant
+t6009,p6075,0314,tank,pant
+t6009,p6075,0315,tank,pant
+t6010,p6081,0005,tank,pant
+t6010,p6081,0011,tank,pant
+t6010,p6081,0013,tank,pant
+t6010,p6081,0015,tank,pant
+t6012,p6077,0330,crop,cap
+t6012,p6077,0332,crop,cap
+t6012,p6077,0336,crop,cap
+t6012,p6077,0338,crop,cap
+t6012,p6077,0341,crop,cap
+t6017,p6053,0248,tank,pant
+t6017,p6053,0249,tank,pant
+t6017,p6053,0258,tank,pant
+t6018,p6071,0150,crop,cap
+t6018,p6071,0154,crop,cap
+t6018,p6071,0157,crop,cap
+t6018,p6071,0167,crop,cap
+t6018,p6071,0168,crop,cap
+t6035,p6057,0476,sleeve,pant
+t6035,p6057,0478,sleeve,pant
+t6035,p6057,0483,sleeve,pant
+t6035,p6057,0484,sleeve,pant
+t6035,p6057,0486,sleeve,pant
+t6036,p6071,0067,tank,cap
+t6036,p6071,0071,tank,cap
+t6036,p6071,0083,tank,cap
+t6037,p6055,0458,tank,pant
+t6037,p6055,0459,tank,pant
+t6037,p6055,0463,tank,pant
+t6037,p6055,0464,tank,pant
+t6037,p6055,0465,tank,pant
+t6800,p6073,0432,tank,pant
+t6800,p6073,0435,tank,pant
+t6800,p6073,0439,tank,pant
+t6800,p6073,0441,tank,pant
+t6800,p6073,0444,tank,pant
+t6900,p6076,0407,tank,cap
+t6900,p6076,0411,tank,cap
+t6900,p6076,0413,tank,cap
+t6900,p6076,0417,tank,cap
+t6900,p6076,0418,tank,cap</textarea>
+        <script>
+var list = [];
+var filteredList = [];
+var filterType = "";
+var itemMap = {};
+var focusItem = 0;
+
+var pageNum = 0;
+var pageSize = 9;
+
+var textContent = ("textContent" in document.body) ? "textContent" : "innerText";
+
+function $(id) {
+  return document.getElementById(id);
+}
+
+function update(pushState) {
+  if(list.length == 0) {
+    var arr = $("db").value.split("\n");
+    for(var i = 0; i < arr.length; i++) {
+      var tuple = arr[i].split(",");//[topId,bottomId,label1,label2]
+      var topId = tuple[0].substr(1);
+      var btmId = tuple[1].substr(1);
+      var id = topId + "!" + btmId;
+      var item = itemMap[id];
+      if(!item) {
+        item = itemMap[id] = {
+          id: id,
+          topId: topId,
+          btmId: btmId,
+          face: arr[i],
+          files: [],
+          tags: {}
+        };
+        list.push(item);
+      }
+      item.files.push(arr[i]);
+      for(var j = 2; j < tuple.length; j++) {
+        item.tags[tuple[j]] = true;
+      }
+    }
+  }
+
+  if(focusItem) {
+    var found = false;
+    for(var i = 0; i < list.length; i++) {
+      if(list[i].id == focusItem) {
+        found = true;
+        var data = list[i];
+        $("shirt")[textContent] = data.topId;
+        $("pants")[textContent] = data.btmId;
+        $("preview").style.backgroundImage = "url(thumbs/" + data.face + ".jpg)";
+        $("preview").style.backgroundImage = "url(imgs/" + data.face + ".jpg)";
+        var link = "https://th3.ca/t/?" + data.face.replace("t", "t=").replace(",p", "&p=").replace(",", "&g=");
+        $("sharelink").href = link;
+        link = encodeURIComponent(link);
+        $("fbshare").href = "https://www.facebook.com/share.php?u=" + link;
+        $("twshare").href = "https://www.twitter.com/share?text=Check%20out%20TH3&hashtags=th3yoga&url=" + link;
+
+        var frag = document.createDocumentFragment();
+        for(var i = 0; i < data.files.length; i++) {
+          var n = document.createElement("span");
+          n.setAttribute("role", "button");
+          n.setAttribute("data-thumb-file", data.files[i]);
+          n.onclick = thumbClick;
+          n.style.backgroundImage = "url(thumbs/" + data.files[i] + ".jpg)";
+          frag.appendChild(n);
+        }
+        $("thumbs")[textContent] = "";
+        $("thumbs").appendChild(frag);
+        break;
+      }
+    }
+    $("intro").style.display = found ? "none" : "";
+    $("single").style.display = found ? "" : "none";
+  } else {
+    $("intro").style.display = "";
+    $("single").style.display = "none";
+  }
+
+  if(filterType) {
+    filteredList = list.filter(function(n) {return n.tags[filterType]});
+    $("filterby")[textContent] = ({
+      crop: "Crop Tops",
+      tank: "Tank Tops",
+      shirt: "T-Shirts",
+      sleeve: "Long Sleeves",
+      jack: "Jackets",
+      short: "Shorts",
+      cap: "Capri Pants",
+      pant: "Pants"
+    })[filterType];
+  } else {
+    filteredList = list;
+    $("filterby")[textContent] = "Gallery";
+  }
+  var itemsNode = $("items");
+  itemsNode[textContent] = "";
+
+  var frag = document.createDocumentFragment();
+  for(var i = pageNum*pageSize, len = Math.min(filteredList.length, i + pageSize); i < len; i++) {
+    var data = filteredList[i];
+    var n = frag.appendChild(document.createElement("a"));
+    n.href = "?i=" + data.id;
+    n.style.backgroundImage = "url(thumbs/" + data.face + ".jpg)";
+    if(data.files.length > 1) {
+      n.setAttribute("data-orig-bkgd", "thumbs/" + data.face + ".jpg");
+      n.setAttribute("data-alt-bkgd", "thumbs/" + data.files[1] + ".jpg");
+      n.onmouseover = itemMouseOver;
+      n.onmouseout = itemMouseOut;
+    }
+    n.setAttribute("aria-label", data.id);
+    n.onclick = itemClick;
+  }
+  itemsNode.appendChild(frag);
+
+  var pageNode = $("paginate");
+  var pageNode2 = $("paginate2");
+  pageNode[textContent] = "";
+  pageNode2[textContent] = "";
+  var maxPageNum = Math.ceil(filteredList.length/pageSize);
+  for(var i = 0; i < maxPageNum; i++) {
+    var n;
+    if(i == pageNum) {
+      n = pageNode.appendChild(document.createElement("strong"));
+    } else {
+      n = pageNode.appendChild(document.createElement("a"));
+      n.href = "?p=" + i + (filterType ? "&type=" + filterType : "") + (focusItem ? "&i=" + focusItem : "");
+      n.onclick = pageNumClick;
+    }
+    n[textContent] = i + 1;
+    pageNode.appendChild(n);
+    n = n.cloneNode(true);
+    if(i != pageNum) n.onclick = pageNumClick;
+    pageNode2.appendChild(n);
+  }
+
+  var hist = [];
+  if(pageNum > 0) hist.push("p=" + pageNum);
+  if(filterType) hist.push("type=" + filterType);
+  if(focusItem) hist.push("i=" + focusItem);
+  hist = hist.join("&");
+  if(pushState && history.pushState) {
+    history.pushState({pageNum: pageNum, filterType: filterType, focusItem: focusItem}, "", "?" + hist);
+  }
+  try { gtag("config", "UA-50470471-1", {page_path:location.pathname+"?"+hist,anonymize_ip:true}); } catch(e) {}
+}
+
+function selectCat(href) {
+  filterType = href.substr(href.lastIndexOf("type=") + 5);
+  pageNum = 0;
+  focusItem = "";
+  update(true);
+  $("filterby").scrollIntoView(true);
+  return false;
+}
+
+function pageNumClick() {
+  pageNum = this[textContent]*1 - 1;
+  update(true);
+  $("list").scrollIntoView();
+  return false;
+}
+
+function itemClick() {
+  focusItem = this.getAttribute("aria-label");
+  update(true);
+  $("single").scrollIntoView();
+  return false;
+}
+
+function itemMouseOver() {
+  this.style.backgroundImage = "url(" + this.getAttribute("data-alt-bkgd") + ")";
+}
+
+function itemMouseOut() {
+  this.style.backgroundImage = "url(" + this.getAttribute("data-orig-bkgd") + ")";
+}
+
+function thumbClick() {
+  $("preview").style.backgroundImage = "url(imgs/" + this.getAttribute("data-thumb-file") + ".jpg)";
+}
+
+function onPopState(e) {
+  e = e.state || {};
+  pageNum = e.pageNum || 0;
+  focusItem = e.focusItem || "";
+  filterType = e.filterType || "";
+  update(false);
+}
+
+function onImgMouseOut(e) {
+  if(this.isFullImg) {
+    this.style.backgroundSize = "contain";
+    this.isFullImg = null;
+  }
+  this.style.backgroundPosition = "50% 0";
+}
+
+function onImgMouseMove(e) {
+  var r = this.getBoundingClientRect();
+  if(r.width == 0) return;
+  var x = (e.clientX - r.left)/r.width;
+  var y = (e.clientY - r.top)/r.width;
+  if(!this.isFullImg) {
+    this.style.backgroundSize = "inherit";
+    this.isFullImg = true;       
+  }
+  this.style.backgroundPosition = Math.round(x*100) + "% " + Math.round(y*100) + "%";
+}
+
+function onImgTouchStart(e) {
+  e.target.onmousemove = null;
+  e.target.onmouseout = null;
+}
+
+function init() {
+  var s = location.href;
+  var pos = Math.max(s.indexOf("#"), s.indexOf("?"));
+  if(pos >= 1) {
+    s = s.substr(pos + 1).split("&");
+    for(var i = 0; i < s.length; i++) {
+      var tuple = s[i].split("=");
+      switch(tuple[0]) {
+        case "p": pageNum = tuple[1]*1; break;
+        case "type": filterType = tuple[1]; break;
+        case "i": focusItem = tuple[1]; break;
+      }
+    }
+  }
+  var preview = $("preview");
+  preview.onmouseout = onImgMouseOut;
+  preview.onmousemove = onImgMouseMove;
+  preview.addEventListener("touchstart", onImgTouchStart, false);
+  update(false);
+  window.onpopstate = onPopState;
+}
+
+init();
+        </script>
+  
+      <style>
+.apps {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+}
+.apps > * {margin: 0 15px}
+      </style>
+
+      <section class=apps>
+        <img src="amexpop_com_Multi-Payment-Logo-Lock-up_Horizontal.jpg" width=240 height=72 border=0 alt="AMEX, MasterCard, VISA, UnionPay">
+      </section>
+
+      <section class=apps>
+        <a href="http://www.facebook.com/th3.ca"><img src="../FB-RGB-500.svg" width=42 height=42 border=0 alt=Facebook></a> 
+        <a href="https://www.instagram.com/th3yoga"><img src="../glyph-logo_May2016.png" width=40 height=40 border=0 alt=Instagram></a>
+        <a href="https://www.twitter.com/th3yoga"><img src="../Twitter_Social_Icon_Circle_Color.svg" width=40 height=40 border=0 alt=Twitter></a>
+      </section>
+    </main>
+
+    <style>
+/* footer menu */
+footer {
+  padding: 1em;
+  background: black;
+  font-size: 12pt;
+  line-height: 1.7em;
+  color: white;
+}
+footer nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+footer nav ul {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+footer nav details {
+  margin: 2% 3%;
+}
+footer nav summary {
+  font-size: 16pt;
+  margin-bottom: 0.7em;
+  font-weight: bold;
+}
+footer a {
+  color: white;
+}
+/* end */
+
+footer .fineprint {
+  font-size: 10pt;
+  line-height: 1.2em;
+  text-align: center;
+}
+    </style>
+
+    <footer>
+      <nav>
+        <details open>
+          <summary>Headlines</summary>
+          <ul>
+            <li><a href="../#outdoors">Outdoors</a></li>
+            <li><a href="../#categories">Categories</a></li>
+            <li><a href="../#fabrics">Fabrics</a></li>
+          </ul>
+        </details>
+
+        <details open>
+          <summary>Catalog</summary>
+          <ul>
+            <li><a href="?type=crop" onclick="return selectCat(this.href);">Crop Tops</a></li>
+            <li><a href="?type=tank" onclick="return selectCat(this.href);">Tank Tops</a></li>
+            <li><a href="?type=shirt" onclick="return selectCat(this.href);">T-Shirts</a></li>
+            <li><a href="?type=sleeve" onclick="return selectCat(this.href);">Long Sleeves</a></li>
+            <li><a href="?type=jack" onclick="return selectCat(this.href);">Jackets</a></li>
+            <li><a href="?type=short" onclick="return selectCat(this.href);">Shorts</a></li>
+            <li><a href="?type=cap" onclick="return selectCat(this.href);">Capri Pants</a></li>
+            <li><a href="?type=pant" onclick="return selectCat(this.href);">Pants</a></li>
+          </ul>
+        </details>
+
+        <details open>
+          <summary>Technology</summary>
+          <ul>
+            <li><a href="../technology/#performance">Performance</a></li>
+            <li><a href="../technology/#weight">Weight</a></li>
+            <li><a href="../technology/#construction">Construction</a></li>
+          </ul>
+        </details>
+
+        <details open>
+          <summary>Company</summary>
+          <ul>
+            <li><a href="../aboutus/">About Us</a></li>
+            <li><a href="mailto:press@th3ANTISPAM.ca">Press</a></li>
+            <li><a href="mailto:careers@th3ANTISPAM.ca">Careers</a></li>
+            <li><a href="../privacy/">Privacy Policy</a></li>
+          </ul>
+        </details>
+
+      </nav>
+      <div class=fineprint>
+        Copyright &copy; 2007-2020 Euro Verve Company Limited, Ontario L3R 3W9, Canada. All rights reserved.
+        Lycra&copy; is a registered trademark of Invista.
+      </div>
+    </footer>
+    <style>
+#gdpr {
+  position: fixed;
+  bottom: 0;
+  left: 2%;
+  width: 96%;
+  padding: 5px 0;
+  display: flex;
+  flex-flow: rows nowrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 12pt;
+  line-height: 14pt;
+  background: #333;
+  color: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+#gdpr > p {margin: 10px}
+#gdpr > div {margin-right: 5px; text-align: center}
+#gdpr > div > button {
+  margin: 5px;
+  padding: 0.3em 1em;
+  background-color: #ddd;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+#gdpr > div > button:last-child {
+  background-color: #f88;
+}
+    </style>
+    <aside id=gdpr style="display: none">
+      <p>By using this website you agree to allow this website and its partners to collect non-sensitive information to deliver a better experience to you.</p>
+      <div><button onclick="setTracker(1);" type=button>Accept</button><button onclick="setTracker(2);" type=button>Decline</button></div>
+    </aside>
+    <script>
+try { if(!(localStorage["ga-out"] > 0)) document.getElementById("gdpr").style.display = ""; } catch(e) {}
+function setTracker(i) {
+  localStorage["ga-out"] = i;
+  document.getElementById("gdpr").style.display = "none";
+}
+    </script>      
+
+    <script>
+(function(a,r,t) {for(var i=0;i<a.length;i++)a[i].href=a[i].href[r](t,"")})(document.querySelectorAll("footer a"),"replace","ANTISPAM");      
+    </script>
+    <script>
+(function(f) {
+  f = function(n, w, d) {
+    w = window;
+    d = document;
+    n = d.querySelector("header").classList;
+    if((w.scrollY || w.pageYOffset || d.body.scrollTop + (d.documentElement && d.documentElement.scrollTop || 0)) > 10) {
+      n.add("mid");
+      n.remove("top");
+    } else {
+      n.remove("mid");
+      n.add("top");
+    }
+  };
+  f();
+  try { window.addEventListener("scroll", f, {passive: true, capture: false}) }
+  catch(e) { window.addEventListener("scroll", f, false) }
+})();
+    </script>
+  </body>
+</html>
