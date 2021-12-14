@@ -1,0 +1,538 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>TH3 Yoga & Athletic Wear | Privacy Policy</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="TH3 is a distributor of clothing for yoga, casual wear and active wear with quick dry technology. Free shipping to select countries.">
+    <style>
+/* base styles */
+@font-face {
+  font-family: 'El Messiri';
+  font-weight: normal;
+  font-display: swap;
+  src: url(../ElMessiri-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'El Messiri';
+  font-weight: bold;
+  font-display: swap;
+  src: url(../ElMessiri-Bold.ttf) format('truetype');
+}
+html, body, h2, p, nav, ul, li, form, figure {margin: 0; padding: 0; border: 0}
+body {
+  font: 14pt 'El Messiri',helvetica,arial,sans-serif;
+  line-height: 1.5em;
+  background: #fff;
+  color: #000;
+}
+h2 {
+  font-size: 24pt;
+  font-weight: normal;
+  text-align: center;
+  margin: 1em 0;
+}
+p {margin-bottom: 1em}
+ul, li {list-style: none}
+summary {list-style: none}
+summary::after {content: "\025BE"}
+summary::-webkit-details-marker {display: none}
+nav a {text-decoration: none}
+/* end */
+
+header {
+  position: fixed; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: stretch;
+  align-items: stretch;
+  background: #eee;
+  -webkit-background: radial-gradient(circle at 50%, rgba(238,238,238,0.9) 50%, rgba(210,210,210,0.9));
+  background: radial-gradient(circle at 50%, rgba(238,238,238,0.9) 50%, rgba(210,210,210,0.9));
+  text-transform: uppercase;
+  z-index: 2;
+}
+@media print {header {position: static}}
+
+nav,
+nav > .menu,
+.outerNav {
+  flex: 1;
+}
+
+/* hamburger button layout */
+#menuBtn {
+  position: absolute; 
+  width: 1px; 
+  height: 1px; 
+  overflow: hidden;
+  opacity: 0;
+}
+.hamburger {
+  padding: 5px 10px;
+  font: normal 20pt Arial;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+header.top > #thinMenu,
+header.mid > #tallMenu {display: none}
+
+@media (max-width: 850px) {
+  header.top > #tallMenu {display: none}
+  header.top > #thinMenu {display: flex}
+  #thinMenu .menu {justify-content: center}
+  #thinMenu .menu > li:not(.selected) {display: none}
+  #thinMenu .menu > li > a.selected {
+    color: #999;
+    font-size: 18pt;
+    margin-right: 0;
+  }
+  #openMenu > .logo img {width: 38px; height: 47px}
+}
+
+#menuBtn ~ #openMenu {display: none}
+#menuBtn:checked ~ #openMenu {display: flex}
+#menuBtn:checked ~ #thinMenu,
+#menuBtn:checked ~ #tallMenu {display: none}
+
+#menuBtn:checked ~ #openMenu {animation: slideDown 0.3s ease-out}
+@keyframes slideDown {from {margin-top: -100%} 90% {margin-top: 10px}}
+/* end */
+
+/* header toolbar */
+header nav {padding: 1% 0}
+
+header .logo {margin: 0 3%}
+header .logo * {display: block}
+
+header nav,
+header ul.menu,
+header ul.submenu {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 1;
+}
+
+header .menu > li > a {
+  display: block;
+  letter-spacing: 1px;
+  font-weight: bold;
+  margin-right: 1em;
+  color: #aaa;
+  white-space: nowrap;
+}
+header .menu > li > a.selected {
+  color: #000;
+}
+header .submenu a {
+  display: block;
+  font-size: 12pt;
+  line-height: 1em;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: #000;
+  white-space: nowrap;
+}
+
+#tallMenu > .outerNav {
+  align-self: flex-end;
+}
+#tallMenu .menu {
+  font-size: 24pt;
+  line-height: 1em;
+  margin: 0px 0 15px 0;
+}
+#tallMenu .submenu {
+  justify-content: center;
+}
+#tallMenu .submenu a {
+  margin-right: 2em;
+}
+
+#thinMenu .menu {
+  font-size: 20pt;
+  line-height: 1em;
+}
+
+#openMenu {
+  overflow: auto;
+  max-height: 100vh;
+  align-items: flex-start;
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.3);
+}
+#openMenu ul.menu {
+  flex-flow: column;
+  align-items: stretch;
+}
+#openMenu ul.menu > li {
+  padding: 0.6em 1em;
+  border-bottom: 1px solid #bbb;
+}
+#openMenu ul.menu > li:last-child {
+  border-bottom: none;
+}
+#openMenu ul.menu > li > a {
+  font-size: 18pt;
+  color: #999;
+}
+#openMenu ul.submenu {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(8em, 1fr));
+  grid-gap: 0.5em 5px;
+  gap: 0.5em 5px;
+  flex: 1;
+  margin-top: 0.5em;
+}
+#openMenu ul.submenu > li > a::before {
+  content: "\02022";
+  padding-right: 0.5em;
+  color: #999;
+}
+/* end */
+
+main {
+  margin: 8em 5% 3% 5%;
+  font-family: Arial, sans-serif;
+}
+@media (max-width: 850px) {
+  main {margin-top: 4em}
+}
+    </style>
+<!-- Google Analytics -->
+<script>
+try { if(localStorage["ga-out"] > 1) throw 2; }
+catch(e) { window["ga-disable-UA-50470471-1"] = true; }
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config","UA-50470471-1",{anonymize_ip:true});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-50470471-1"></script>
+<!-- Google Analytics -->
+  </head>
+  <body>
+    <header class="mid">
+      <input id=menuBtn type=checkbox tabindex="-1">
+      <nav id=thinMenu>
+        <div class=logo><a href="https://www.th3.ca"><img src="../logo_serif.png" width=38 height=47 border=0 alt=TH3></a></div>
+        <ul class=menu>
+          <li class=selected><a href="../" class=selected>Headlines</a></li>
+          <li><a href="../products/">Catalog</a></li>
+          <li><a href="./technology/">Technology</a></li>
+        </ul>
+        <label for=menuBtn class=hamburger taxindex=0 role=button aria-label=Expand>&equiv;</label>
+      </nav>
+
+      <nav id=tallMenu>
+        <div class=logo><a href="https://www.th3.ca"><img src="../logo_serif.png" width=76 height=94 border=0 alt=TH3></a></div>
+        <div class=outerNav>
+          <ul class=menu>
+            <li class=selected><a href="../" class=selected>Headlines</a></li>
+            <li><a href="../products/">Catalog</a></li>
+            <li><a href="../technology/">Technology</a></li>
+          </ul>
+        </div>
+        <label for=menuBtn class=hamburger tabindex=0 role=button aria-label=Expand>&equiv;</label>
+      </nav>
+
+      <nav id=openMenu>
+        <div class=logo><a href="https://www.th3.ca"><img src="../logo_serif.png" width=76 height=94 border=0 alt=TH3></a></div>
+        <ul class=menu>
+          <li>
+            <a href="../">Headlines</a>
+            <ul class=submenu>
+              <li><a href="../technology/#outdoors">Outdoors</a></li>
+              <li><a href="../technology/#categories">Categories</a></li>
+              <li><a href="../technology/#fabrics">Fabrics</a></li>                
+            </ul>
+          </li>
+
+          <li>
+            <a href="../products/">Catalog</a>
+            <ul class=submenu>
+              <li><a href="../products/#type=crop">Crop Tops</a></li>
+              <li><a href="../products/#type=tank">Tank Tops</a></li>
+              <li><a href="../products/#type=shirt">T-Shirts</a></li>
+              <li><a href="../products/#type=sleeve">Long Sleeves</a></li>
+              <li><a href="../products/#type=jack">Jackets</a></li>
+              <li><a href="../products/#type=short">Shorts</a></li>
+              <li><a href="../products/#type=cap">Capri Pants</a></li>
+              <li><a href="../products/#type=pant">Pants</a></li>
+            </ul>  
+          </li>
+
+          <li>
+            <a href=".">Technology</a>
+            <ul class=submenu>
+              <li><a href="../technology/#performance">Performance</a></li>
+              <li><a href="../technology/#weight">Weight</a></li>
+              <li><a href="../technology/#construction">Construction</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <label for=menuBtn class=hamburger tabindex=0 role=button>&times;</label>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Privacy Policy</h2>
+<!-- begin -->
+<ol>
+<li><a href="#preamble">Preamble</a></li>
+<li><a href="#principles">Our Principles</a></li>
+<li><a href="#personalinfo">Personal Information EV Collects</a></li>
+<li><a href="#forwhat">What EV does with the Personal Information</a></li>
+<li><a href="#disclosures">Disclosures of Personal Information</a></li>
+<li><a href="#security">Security of Personal Information Collected via the Websites</a></li>
+<li><a href="#datausage">Data Usage Policy: Non Personal Browsing and Site Usage Information</a></li>
+<li><a href="#spinoffs">Reorganization or Spin-Offs</a></li>
+<li><a href="#children">Children</a></li>
+<li><a href="#3rdparties">Third-Party Sites</a></li>
+<li><a href="#internationalusers">Special Note to International Users</a></li>
+<li><a href="#changes">Changes and Updates to this Privacy Policy</a></li>
+</ol>
+
+<p><a name="preamble"></a><br>
+This Privacy Policy (&#8220;Privacy Policy&#8221;) explains the collection, use, and disclosure of &#8220;personal information&#8221; by Euro Verve Co. Ltd. (&#8220;EV&#8221; or &#8220;Euro Verve&#8221;), a Toronto Limited Company, with its principal place of business at 951 Denison Street, Unit 18, Markham, Toronto, Ontario, L3R 3W9, Canada. This Privacy Policy includes products and services provided through websites that Euro Verve operates, which include, but are not limited to, <a href="http://www.th3.ca/">http://www.th3.ca</a>. Euro Verve does not operate the website at http://www.th3.com. Furthermore, this Privacy Policy does not apply to any of the websites operated by affiliates of Euro Verve.</p>
+<p>In addition, additional or supplemental Privacy Policy terms (&#8220;Supplemental Privacy Policy Terms&#8221;) may apply to a particular Website or service provided thereon. All such Supplemental Privacy Policy Terms will be accessible for you to read either within, or through your use of, that Website or service.</p>
+<p>This Privacy Policy also explains our commitment to you with respect to our use and disclosure of non personal browsing and site usage data that Euro Verve collects as the provider of the Websites. That commitment is contained in a &#8220;Data Usage Policy,&#8221; below.</p>
+<p>As used in this policy, &#8220;personal information&#8221; means information that would allow a party to identify you such as, for example, your name, address or location, telephone number or email address.</p>
+<p>By accessing the Websites, you are accepting and agreeing to the practices described in this Privacy Policy.</p>
+<p><a name="principles"></a></p>
+<h2>Our Principles</h2>
+<p>Euro Verve is committed to handling responsibly the information and data we collect about you through our Websites, whether personal information or non personal browsing and site usage data. We have designed our Privacy Policy and our Data Usage Policy consistent with the following principles (the &#8220;Principles&#8221;):</p>
+<ol>
+<li>Privacy policies and data collection and use policies should be human readable, comprehensive, and easy to locate;</li>
+<li>Only the minimum amount of information reasonably necessary to provide you with services should be collected and maintained, and only for so long as reasonably needed or required;</li>
+<li>Information you provide through our Websites, or that we gather as a result of your use of our Websites or services, should not be used for marketing or advertising purposes, nor should it be provided voluntarily (without your permission) to anyone else unless required; and</li>
+<li>Unless restricted or prohibited by law, and provided your email address has been collected and retained, you should be notified when circumstances require Euro Verve to provide a third party with your personal information.</li>
+</ol>
+<p><a name="personalinfo"></a></p>
+<h2>Personal Information EV Collects</h2>
+<p>We may collect personal information at several places on the Websites, including without limitation:</p>
+<ul>
+<li>when you provide us with your personal information such as by sending an email to us or signing up to receive a newsletter or our events listing;</li>
+<li>when you subscribe to one of our email discussion lists or register to establish a user account on any of our Websites;</li>
+<li>when you purchase merchandise;</li>
+<li>when you join the Euro Verve network, and when you thereafter create/edit your profile page, identify your content, share your story; and</li>
+<li>when you provide personal information in connection with your participation in any of the forums we make available to that community.</li>
+</ul>
+<p><a name="forwhat"></a></p>
+<h2>What EV does with Personal Information</h2>
+<p><strong>Emails and Newsletters</strong>. We use the personal information you provide to us when you send us emails or sign up to receive our newsletter or events listing in order to respond to your request &#8212; for example, to reply to your email or to send you communications about news and events related to Euro Verve.</p>
+<p>When you subscribe to our newsletter, events list or one of our email discussion lists, your name and email address is sent to and stored by us. Personal information submitted as part of our email discussion lists is used for the purpose of managing the discussion lists. Your name and email address will typically be visible to other list participants when you correspond on the list and to the general public in the discussion archives. All emails sent to the discussions list are publicly archived.</p>
+<p><strong>Euro Verve Website</strong>. When you join our network you provide personal information to create your account and establish a password and profile. We use that personal information to establish and maintain your accounts, provide you with the features we provide for account holders, and for the purpose of contacting you about upcoming news and events relevant to Euro Verve.</p>
+<p>By joining the Euro Verve network, you are also given a public profile page where you can voluntarily post personal information for public viewing. The information that you submit on your public profile page, including but not limited to any photograph or image of yourself you upload, is posted by you at your discretion. The information you publish on your public profile page, including your personal information, may be used by anyone who views that information for any lawful purpose, with the exception of any photograph or image of yourself that you upload.</p>
+<p>Registered Users on the Euro Verve Website are automatically provided with a public page where you may post personal information for public viewing. You are not required to post any information or personal information on this page, but may be posted in your own sole discretion (although any information posted remains subject to EV&#8217;s <a href="/privacy">Terms of Use</a>). Please note that the information you publish on your public page, including your personal information, may be used by anyone who views that information for any lawful purpose and, where relevant, subject to license terms set forth in EV&#8217;s Terms of Use. EV may use the personal and non personal browsing information you provide on your public page to promote the mission of Euro Verve. If provided, your name may be associated with content you contribute to the Euro Verve Website.</p>
+<p>Any other personal information that we may collect which is not described specifically in this Privacy Policy will only be collected and used in accordance with the Principles.</p>
+<p><a name="disclosures"></a></p>
+<h2>Disclosures of Personal Information</h2>
+<p>In general, it is not Euro Verve&#8217;s practice to disclose personal information to third parties. We may share personal information in two instances:</p>
+<p>First, Euro Verve may share personal information with our contractors and service providers in order to maintain, enhance, or add to the functionality of the Websites or service.</p>
+<p>Second, we may disclose your personal information to third parties in a good faith belief that such disclosure is reasonably necessary to (a) take action regarding suspected illegal activities; (b) enforce or apply our Master Terms of Use and Privacy Policy; (c) comply with legal process, such as a search warrant, subpoena, statute, or court order; or (d) protect our rights, reputation, and property, or that of our users, affiliates, or the public.</p>
+<p>If Euro Verve is required to provide a third party with your personal information (whether by subpoena or otherwise), then provided we have collected and retained an email address for you, Euro Verve will use reasonable means to notify you promptly of that event, unless prohibited by law or EV is otherwise advised not to notify you on the advice of legal counsel.</p>
+<p><a name="security"></a></p>
+<h2>Security of Personal Information Collected via the Websites</h2>
+<p>Euro Verve has implemented reasonable measures to protect against unauthorized access to and unlawful interception or processing of personal information that Euro Verve stores and controls. However, no website can fully eliminate security risks. Third parties may circumvent our security measures to unlawfully intercept or access transmissions or private communications. We will post a reasonably prominent notice to the Websites if any such security breach occurs.</p>
+<p><a name="datausage"></a></p>
+<h2>Data Usage Policy: Non Personal Browsing and Site Usage Information</h2>
+<p>Our Data Usage Policy covers how we maintain and use information about you that is collected by our Websites and server logs, including when you log into a website using your Euro Verve ID.</p>
+<p><strong>Non Personal Browsing Information We Collect</strong>. When you use the Websites, our servers (which may be hosted by a third party service provider) may collect information indirectly and automatically (through, for example, the use of your &#8220;IP address&#8221;) about your activities while visiting the Websites and information about the browser you are using. In addition, whenever you use your Euro Verve ID to log into a website, our servers (which, again, may be hosted by a third party service provider) keep a log of the websites you visit and when you visit them.</p>
+<p><strong>No Linking</strong>. We do not intentionally link browsing information or information from our server logs to the personal information you submit to us. We use this information for internal purposes only, such as to help understand how the Websites are being used, to improve our Websites and the features we provide, and for systems administration purposes. EV may use a third party analytics provider to help us collect and analyze non personal browsing information through operation of our Websites for those same purposes.</p>
+<p><strong>No Selling or Sharing</strong>. Except in the unique situations identified in this Privacy Policy, Euro Verve does not sell or otherwise voluntarily provide the non personal browsing information we collect about you or your website usage to third parties.</p>
+<p><strong>No Retention</strong>. EV discards non personal browsing information from our server logs once we have used the information for the limited purposes noted above, under &#8220;No Linking.&#8221;</p>
+<p><strong>Notice</strong>. If Euro Verve is required to provide a third party with your non personal browsing information, then EV will use reasonable means to notify you promptly of that event, unless EV is prohibited by law from doing so or is otherwise advised not to notify you on the advice of legal counsel.</p>
+<p>Any other non-personal information that we collect which is not described specifically in this Privacy Policy will only be collected and used in accordance with the Principles.</p>
+<p><a name="spinoffs"></a></p>
+<h2>Reorganization or Spin-Offs</h2>
+<p>Euro Verve may transfer some or all of your personal and/or non personal browsing information to a third party as a result of a reorganization, spin-off or similar transaction. Upon such transfer, the acquirer&#8217;s privacy policy will apply. In such event, Euro Verve will use reasonable efforts to notify you and to ensure that at the time of the transaction the acquirer&#8217;s privacy policy complies with the Principles.</p>
+<p><a name="children"></a></p>
+<h2>Children</h2>
+<p>The Websites are not directed at children under the age of 13. Consistent with the federal Children&#8217;s Online Privacy Protection Act of 1998 (COPPA), we will never knowingly request personal information from anyone under the age of 13 without requiring parental consent. Our <a href="/terms">Terms of Use</a> specifically prohibit anyone using our Websites from submitting any personally identifiable information about persons under 13 years of age. Any person who provides their personal information to EV through the Websites represents that they are 13 years of age or older.</p>
+<p><a name="3rdparties"></a></p>
+<h2>Third-Party Sites</h2>
+<p>The Websites may include links to other websites. You should consult the respective privacy policies of these third-party sites. This Privacy Policy does not apply to, and we cannot control the activities of, such other websites.</p>
+<p><a name="internationalusers"></a></p>
+<h2>Special Note to International Users</h2>
+<p>The Websites are hosted in the United States. If you are accessing the Websites from the European Union, Asia, or any other region with laws or regulations governing personal data collection, use and disclosure that differ from United States laws, please note that you are transferring your personal data to the United States which does not have the same data protection laws as the EU and other regions. By providing your personal data you consent to:</p>
+<ul>
+<li>the use of your personal data for the uses identified above in accordance with the Privacy Policy; and</li>
+<li>the transfer of your personal data to the United States as indicated above.</li>
+</ul>
+<p><a name="changes"></a></p>
+<h2>Changes and Updates to this Privacy Policy</h2>
+<p>We may occasionally update this Privacy Policy. When we do, we will also revise the Effective Date below. We encourage you to periodically review this Privacy Policy to stay informed about how we are protecting the personal information we collect. Your continued use of the Websites constitutes your agreement to this Privacy Policy and any updates.</p>
+<p><a name="usingthispolicy"></a></p>
+<h2>Privacy Policy License</h2>
+<p>The Euro Verve Privacy Policy is based on the Creative Commons Privacy Policy which is licensed under a <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 License</a>.</p>
+<!-- end -->
+
+    </main>
+
+    <style>
+/* footer menu */
+footer {
+  padding: 1em;
+  background: black;
+  font-size: 12pt;
+  line-height: 1.7em;
+  color: white;
+}
+footer nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+footer nav ul {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+footer nav details {
+  margin: 2% 3%;
+}
+footer nav summary {
+  font-size: 16pt;
+  margin-bottom: 0.7em;
+  font-weight: bold;
+}
+footer a {
+  color: white;
+}
+/* end */
+
+footer .fineprint {
+  font-size: 10pt;
+  line-height: 1.2em;
+  text-align: center;
+}
+    </style>
+
+    <footer>
+      <nav>
+        <details open>
+          <summary>Headlines</summary>
+          <ul>
+            <li><a href="../#outdoors">Outdoors</a></li>
+            <li><a href="../#categories">Categories</a></li>
+            <li><a href="../#fabrics">Fabrics</a></li>
+          </ul>
+        </details>
+
+        <details open>
+          <summary>Catalog</summary>
+          <ul>
+            <li><a href="../products/#type=crop">Crop Tops</a></li>
+            <li><a href="../products/#type=tank">Tank Tops</a></li>
+            <li><a href="../products/#type=shirt">T-Shirts</a></li>
+            <li><a href="../products/#type=sleeve">Long Sleeves</a></li>
+            <li><a href="../products/#type=jack">Jackets</a></li>
+            <li><a href="../products/#type=short">Shorts</a></li>
+            <li><a href="../products/#type=cap">Capri Pants</a></li>
+            <li><a href="../products/#type=pant">Pants</a></li>
+          </ul>
+        </details>
+
+        <details open>
+          <summary>Technology</summary>
+          <ul>
+            <li><a href="../technology/#performance">Performance</a></li>
+            <li><a href="../technology/#weight">Weight</a></li>
+            <li><a href="../technology/#construction">Construction</a></li>
+          </ul>
+        </details>
+
+        <details open>
+          <summary>Company</summary>
+          <ul>
+            <li><a href="../aboutus/">About Us</a></li>
+            <li><a href="mailto:press@th3ANTISPAM.ca">Press</a></li>
+            <li><a href="mailto:careers@th3ANTISPAM.ca">Careers</a></li>
+            <li><a href=".">Privacy Policy</a></li>
+          </ul>
+        </details>
+
+      </nav>
+      <div class=fineprint>
+        Copyright &copy; 2007-2020 Euro Verve Company Limited, Ontario L3R 3W9, Canada. All rights reserved.
+        Lycra&copy; is a registered trademark of Invista.
+      </div>
+    </footer>
+
+    <style>
+#gdpr {
+  position: fixed;
+  bottom: 0;
+  left: 2%;
+  width: 96%;
+  padding: 5px 0;
+  display: flex;
+  flex-flow: rows nowrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 12pt;
+  line-height: 14pt;
+  background: #333;
+  color: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+#gdpr > p {margin: 10px}
+#gdpr > div {margin-right: 5px; text-align: center}
+#gdpr > div > button {
+  margin: 5px;
+  padding: 0.3em 1em;
+  background-color: #ddd;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+#gdpr > div > button:last-child {
+  background-color: #f88;
+}
+    </style>
+    <aside id=gdpr style="display: none">
+      <p>By using this website you agree to allow this website and its partners to collect non-sensitive information to deliver a better experience to you.</p>
+      <div><button onclick="setTracker(1);" type=button>Accept</button><button onclick="setTracker(2);" type=button>Decline</button></div>
+    </aside>
+    <script>
+try { if(!(localStorage["ga-out"] > 0)) document.getElementById("gdpr").style.display = ""; } catch(e) {}
+function setTracker(i) {
+  localStorage["ga-out"] = i;
+  document.getElementById("gdpr").style.display = "none";
+}
+    </script>
+
+    <script>
+(function(a,r,t) {for(var i=0;i<a.length;i++)a[i].href=a[i].href[r](t,"")})(document.querySelectorAll("footer a"),"replace","ANTISPAM");      
+    </script>
+    <script>
+(function(f) {
+  f = function(n, w, d) {
+    w = window;
+    d = document;
+    n = d.querySelector("header").classList;
+    if((w.scrollY || w.pageYOffset || d.body.scrollTop + (d.documentElement && d.documentElement.scrollTop || 0)) > 10) {
+      n.add("mid");
+      n.remove("top");
+    } else {
+      n.remove("mid");
+      n.add("top");
+    }
+  };
+  f();
+  try { window.addEventListener("scroll", f, {passive: true, capture: false}) }
+  catch(e) { window.addEventListener("scroll", f, false) }
+})();
+    </script>
+  </body>
+</html>
