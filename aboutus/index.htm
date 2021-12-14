@@ -1,0 +1,467 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>TH3 Yoga & Athletic Wear | About Us</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="TH3 is a distributor of clothing for yoga, casual wear and active wear with quick dry technology. Free shipping to select countries.">
+    <style>
+/* base styles */
+@font-face {
+  font-family: 'El Messiri';
+  font-weight: normal;
+  font-display: swap;
+  src: url(../ElMessiri-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'El Messiri';
+  font-weight: bold;
+  font-display: swap;
+  src: url(../ElMessiri-Bold.ttf) format('truetype');
+}
+html, body, h2, p, nav, ul, li, form, figure {margin: 0; padding: 0; border: 0}
+body {
+  font: 14pt 'El Messiri',helvetica,arial,sans-serif;
+  line-height: 1.5em;
+  background: #fff;
+  color: #000;
+}
+h2 {
+  font-size: 24pt;
+  font-weight: normal;
+  text-align: center;
+  color: #aaa;
+  margin: 1em 0;
+}
+p {margin-bottom: 1em}
+ul, li {list-style: none}
+summary {list-style: none}
+summary::after {content: "\025BE"}
+summary::-webkit-details-marker {display: none}
+nav a {text-decoration: none}
+/* end */
+
+header {
+  position: fixed; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: stretch;
+  align-items: stretch;
+  background: #eee;
+  -webkit-background: radial-gradient(circle at 50%, rgba(238,238,238,0.9) 50%, rgba(210,210,210,0.9));
+  background: radial-gradient(circle at 50%, rgba(238,238,238,0.9) 50%, rgba(210,210,210,0.9));
+  text-transform: uppercase;
+  z-index: 2;
+}
+@media print {header {position: static}}
+
+nav,
+nav > .menu,
+.outerNav {
+  flex: 1;
+}
+
+/* hamburger button layout */
+#menuBtn {
+  position: absolute; 
+  width: 1px; 
+  height: 1px; 
+  overflow: hidden;
+  opacity: 0;
+}
+.hamburger {
+  padding: 5px 10px;
+  font: normal 20pt Arial;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+header.top > #thinMenu,
+header.mid > #tallMenu {display: none}
+
+@media (max-width: 850px) {
+  header.top > #tallMenu {display: none}
+  header.top > #thinMenu {display: flex}
+  #thinMenu .menu {justify-content: center}
+  #thinMenu .menu > li:not(.selected) {display: none}
+  #thinMenu .menu > li > a.selected {
+    color: #999;
+    font-size: 18pt;
+    margin-right: 0;
+  }
+  #openMenu > .logo img {width: 38px; height: 47px}
+}
+
+#menuBtn ~ #openMenu {display: none}
+#menuBtn:checked ~ #openMenu {display: flex}
+#menuBtn:checked ~ #thinMenu,
+#menuBtn:checked ~ #tallMenu {display: none}
+
+#menuBtn:checked ~ #openMenu {animation: slideDown 0.3s ease-out}
+@keyframes slideDown {from {margin-top: -100%} 90% {margin-top: 10px}}
+/* end */
+
+/* header toolbar */
+header nav {padding: 1% 0}
+
+header .logo {margin: 0 3%}
+header .logo * {display: block}
+
+header nav,
+header ul.menu,
+header ul.submenu {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 1;
+}
+
+header .menu > li > a {
+  display: block;
+  letter-spacing: 1px;
+  font-weight: bold;
+  margin-right: 1em;
+  color: #aaa;
+  white-space: nowrap;
+}
+header .menu > li > a.selected {
+  color: #000;
+}
+header .submenu a {
+  display: block;
+  font-size: 12pt;
+  line-height: 1em;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: #000;
+  white-space: nowrap;
+}
+
+#tallMenu > .outerNav {
+  align-self: flex-end;
+}
+#tallMenu .menu {
+  font-size: 24pt;
+  line-height: 1em;
+  margin: 0px 0 15px 0;
+}
+#tallMenu .submenu {
+  justify-content: center;
+}
+#tallMenu .submenu a {
+  margin-right: 2em;
+}
+
+#thinMenu .menu {
+  font-size: 20pt;
+  line-height: 1em;
+}
+
+#openMenu {
+  overflow: auto;
+  max-height: 100vh;
+  align-items: flex-start;
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.3);
+}
+#openMenu ul.menu {
+  flex-flow: column;
+  align-items: stretch;
+}
+#openMenu ul.menu > li {
+  padding: 0.6em 1em;
+  border-bottom: 1px solid #bbb;
+}
+#openMenu ul.menu > li:last-child {
+  border-bottom: none;
+}
+#openMenu ul.menu > li > a {
+  font-size: 18pt;
+  color: #999;
+}
+#openMenu ul.submenu {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(8em, 1fr));
+  grid-gap: 0.5em 5px;
+  gap: 0.5em 5px;
+  flex: 1;
+  margin-top: 0.5em;
+}
+#openMenu ul.submenu > li > a::before {
+  content: "\02022";
+  padding-right: 0.5em;
+  color: #999;
+}
+/* end */
+
+main {
+  margin: 9em 5% 3% 5%;
+}
+@media (max-width: 850px) {
+  main {margin-top: 4em}
+}
+    </style>
+<!-- Google Analytics -->
+<script>
+try { if(localStorage["ga-out"] > 1) throw 2; }
+catch(e) { window["ga-disable-UA-50470471-1"] = true; }
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config","UA-50470471-1",{anonymize_ip:true});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-50470471-1"></script>
+<!-- Google Analytics -->
+  </head>
+  <body>
+    <header class="mid">
+      <input id=menuBtn type=checkbox tabindex="-1">
+      <nav id=thinMenu>
+        <div class=logo><a href="https://www.th3.ca"><img src="../logo_serif.png" width=38 height=47 border=0 alt=TH3></a></div>
+        <ul class=menu>
+          <li class=selected><a href="../" class=selected>Headlines</a></li>
+          <li><a href="../products/">Catalog</a></li>
+          <li><a href="./technology/">Technology</a></li>
+        </ul>
+        <label for=menuBtn class=hamburger taxindex=0 role=button aria-label=Expand>&equiv;</label>
+      </nav>
+
+      <nav id=tallMenu>
+        <div class=logo><a href="https://www.th3.ca"><img src="../logo_serif.png" width=76 height=94 border=0 alt=TH3></a></div>
+        <div class=outerNav>
+          <ul class=menu>
+            <li class=selected><a href="../" class=selected>Headlines</a></li>
+            <li><a href="../products/">Catalog</a></li>
+            <li><a href="../technology/">Technology</a></li>
+          </ul>
+        </div>
+        <label for=menuBtn class=hamburger tabindex=0 role=button aria-label=Expand>&equiv;</label>
+      </nav>
+
+      <nav id=openMenu>
+        <div class=logo><a href="https://www.th3.ca"><img src="../logo_serif.png" width=76 height=94 border=0 alt=TH3></a></div>
+        <ul class=menu>
+          <li>
+            <a href="../">Headlines</a>
+            <ul class=submenu>
+              <li><a href="../technology/#outdoors">Outdoors</a></li>
+              <li><a href="../technology/#categories">Categories</a></li>
+              <li><a href="../technology/#fabrics">Fabrics</a></li>                
+            </ul>
+          </li>
+
+          <li>
+            <a href="../products/">Catalog</a>
+            <ul class=submenu>
+              <li><a href="../products/#type=crop">Crop Tops</a></li>
+              <li><a href="../products/#type=tank">Tank Tops</a></li>
+              <li><a href="../products/#type=shirt">T-Shirts</a></li>
+              <li><a href="../products/#type=sleeve">Long Sleeves</a></li>
+              <li><a href="../products/#type=jack">Jackets</a></li>
+              <li><a href="../products/#type=short">Shorts</a></li>
+              <li><a href="../products/#type=cap">Capri Pants</a></li>
+              <li><a href="../products/#type=pant">Pants</a></li>
+            </ul>  
+          </li>
+
+          <li>
+            <a href=".">Technology</a>
+            <ul class=submenu>
+              <li><a href="../technology/#performance">Performance</a></li>
+              <li><a href="../technology/#weight">Weight</a></li>
+              <li><a href="../technology/#construction">Construction</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <label for=menuBtn class=hamburger tabindex=0 role=button>&times;</label>
+      </nav>
+    </header>
+
+    <style>
+#slogan {margin: 0 10%; text-align: justify}
+.center {text-align: center}
+#kneel {max-width: 100%; width: 972px; max-height: 666px}
+    </style>
+    <main>
+      <h2>About Us</h2>
+
+      <section id=slogan>
+        Euro Verve Company Ltd. is a clothing and apparel company that designs and manufactures active wear and fashion wear for a 
+        wide range of customers from department stores to boutique shops in the US, Canada and Southeast Asia. We are known for our
+        pledge to only use sustainable manufacturing methods that respects workers worldwide and does no harm to the environment.
+      </section>
+  
+      <section class=center><img src="kneel.jpg" id=kneel></section>
+
+      <section class="adr center" itemscope itemtype="https://schema.org/PostalAddress">
+        <span itemprop="streetAddress" class="street-address">951 Denison Street, Unit 16</span>, 
+        <br><span itemprop="addressLocality" class="locality">Markham, Toronto</span>, <span itemprop="addressRegion" class="region">Ontario</span>,
+        <br><span itemprop="postalCode" class="postal-code">L3R&nbsp;3W9</span>, <span class="country-name">Canada</span>
+        <br><span itemprop="email" class="email"><u><a href="mailto:sales@th3ANTISPAM.ca?subject=TH3%20yoga%20feedback">sales&#64;th3&#46;ca</a></u></span>
+      </section>
+    </main>
+
+    <style>
+/* footer menu */
+footer {
+  padding: 1em;
+  background: black;
+  font-size: 12pt;
+  line-height: 1.7em;
+  color: white;
+}
+footer nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+footer nav ul {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+footer nav details {
+  margin: 2% 3%;
+}
+footer nav summary {
+  font-size: 16pt;
+  margin-bottom: 0.7em;
+  font-weight: bold;
+}
+footer a {
+  color: white;
+}
+/* end */
+
+footer .fineprint {
+  font-size: 10pt;
+  line-height: 1.2em;
+  text-align: center;
+}
+    </style>
+
+    <footer>
+      <nav>
+        <details open>
+          <summary>Headlines</summary>
+          <ul>
+            <li><a href="../#outdoors">Outdoors</a></li>
+            <li><a href="../#categories">Categories</a></li>
+            <li><a href="../#fabrics">Fabrics</a></li>
+          </ul>
+        </details>
+
+        <details open>
+          <summary>Catalog</summary>
+          <ul>
+            <li><a href="../products/#type=crop">Crop Tops</a></li>
+            <li><a href="../products/#type=tank">Tank Tops</a></li>
+            <li><a href="../products/#type=shirt">T-Shirts</a></li>
+            <li><a href="../products/#type=sleeve">Long Sleeves</a></li>
+            <li><a href="../products/#type=jack">Jackets</a></li>
+            <li><a href="../products/#type=short">Shorts</a></li>
+            <li><a href="../products/#type=cap">Capri Pants</a></li>
+            <li><a href="../products/#type=pant">Pants</a></li>
+          </ul>
+        </details>
+
+        <details open>
+          <summary>Technology</summary>
+          <ul>
+            <li><a href="../technology/#performance">Performance</a></li>
+            <li><a href="../technology/#weight">Weight</a></li>
+            <li><a href="../technology/#construction">Construction</a></li>
+          </ul>
+        </details>
+
+        <details open>
+          <summary>Company</summary>
+          <ul>
+            <li><a href=".">About Us</a></li>
+            <li><a href="mailto:press@th3ANTISPAM.ca">Press</a></li>
+            <li><a href="mailto:careers@th3ANTISPAM.ca">Careers</a></li>
+            <li><a href="../privacy/">Privacy Policy</a></li>
+          </ul>
+        </details>
+
+      </nav>
+      <div class=fineprint>
+        Copyright &copy; 2007-2020 Euro Verve Company Limited, Ontario L3R 3W9, Canada. All rights reserved.
+        Lycra&copy; is a registered trademark of Invista.
+      </div>
+    </footer>
+
+    <style>
+#gdpr {
+  position: fixed;
+  bottom: 0;
+  left: 2%;
+  width: 96%;
+  padding: 5px 0;
+  display: flex;
+  flex-flow: rows nowrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 12pt;
+  line-height: 14pt;
+  background: #333;
+  color: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+#gdpr > p {margin: 10px}
+#gdpr > div {margin-right: 5px; text-align: center}
+#gdpr > div > button {
+  margin: 5px;
+  padding: 0.3em 1em;
+  background-color: #ddd;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+#gdpr > div > button:last-child {
+  background-color: #f88;
+}
+    </style>
+    <aside id=gdpr style="display: none">
+      <p>By using this website you agree to allow this website and its partners to collect non-sensitive information to deliver a better experience to you.</p>
+      <div><button onclick="setTracker(1);" type=button>Accept</button><button onclick="setTracker(2);" type=button>Decline</button></div>
+    </aside>
+    <script>
+try { if(!(localStorage["ga-out"] > 0)) document.getElementById("gdpr").style.display = ""; } catch(e) {}
+function setTracker(i) {
+  localStorage["ga-out"] = i;
+  document.getElementById("gdpr").style.display = "none";
+}
+    </script>
+
+    <script>
+(function(a,r,t) {for(var i=0;i<a.length;i++)a[i].href=a[i].href[r](t,"")})(document.querySelectorAll("a[href^='mailto:']"),"replace","ANTISPAM");      
+    </script>
+    <script>
+(function(f) {
+  f = function(n, w, d) {
+    w = window;
+    d = document;
+    n = d.querySelector("header").classList;
+    if((w.scrollY || w.pageYOffset || d.body.scrollTop + (d.documentElement && d.documentElement.scrollTop || 0)) > 10) {
+      n.add("mid");
+      n.remove("top");
+    } else {
+      n.remove("mid");
+      n.add("top");
+    }
+  };
+  f();
+  try { window.addEventListener("scroll", f, {passive: true, capture: false}) }
+  catch(e) { window.addEventListener("scroll", f, false) }
+})();
+    </script>
+  </body>
+</html>
