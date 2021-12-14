@@ -1,9 +1,770 @@
 <!doctype html>
 <html>
   <head>
-    <title>TH3</title>
-  </head>
+    <meta charset="UTF-8">
+    <title>TH3 Yoga & Athletic Wear</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="TH3 is a distributor of clothing for yoga, casual wear and active wear with quick dry technology. Free shipping to select countries.">
+    <meta name="og:image" content="og_fb.gif">
+    <meta property="fb:admins" content="244490202330641" />
+    <style>
+/* base styles */
+@font-face {
+  font-family: 'El Messiri';
+  font-weight: normal;
+  font-display: swap;
+  src: url(ElMessiri-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'El Messiri';
+  font-weight: bold;
+  font-display: swap;
+  src: url(ElMessiri-Bold.ttf) format('truetype');
+}
+html, body, h2, p, nav, ul, li, form, figure {margin: 0; padding: 0; border: 0}
+img {border: 0}
+body {
+  font: 14pt 'El Messiri',helvetica,arial,sans-serif;
+  background: #fff;
+  color: #000;
+}
+h2 {
+  font-size: 24pt;
+  line-height: 1.1em;
+  font-weight: normal;
+  color: #aaa;
+  text-align: center;
+}
+ul, li {list-style: none}
+summary {list-style: none}
+summary::after {content: "\025BE"}
+summary::-webkit-details-marker {display: none}
+nav a {text-decoration: none}
+/* end */
+
+header {
+  position: fixed; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: stretch;
+  align-items: stretch;
+  background: #eee;
+  -webkit-background: radial-gradient(circle at 50%, rgba(238,238,238,0.9) 50%, rgba(210,210,210,0.9));
+  background: radial-gradient(circle at 50%, rgba(238,238,238,0.9) 50%, rgba(210,210,210,0.9));
+  text-transform: uppercase;
+  z-index: 2;
+}
+@media print {header {position: static}}
+
+nav,
+nav > .menu,
+.outerNav {
+  flex: 1;
+}
+
+/* hamburger button layout */
+#menuBtn {
+  position: absolute; 
+  width: 1px; 
+  height: 1px; 
+  overflow: hidden;
+  opacity: 0;
+}
+.hamburger {
+  padding: 5px 10px;
+  font: normal 20pt Arial;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+header.top > #thinMenu,
+header.mid > #tallMenu {display: none}
+
+@media (max-width: 850px) {
+  header.top > #tallMenu {display: none}
+  header.top > #thinMenu {display: flex}
+  #thinMenu .menu {justify-content: center}
+  #thinMenu .menu > li:not(.selected) {display: none}
+  #thinMenu .menu > li > a.selected {
+    color: #999;
+    font-size: 18pt;
+    margin-right: 0;
+  }
+  #openMenu > .logo img {width: 38px; height: 47px}
+}
+
+#menuBtn ~ #openMenu {display: none}
+#menuBtn:checked ~ #openMenu {display: flex}
+#menuBtn:checked ~ #thinMenu,
+#menuBtn:checked ~ #tallMenu {display: none}
+
+#menuBtn:checked ~ #openMenu {animation: slideDown 0.3s ease-out}
+@keyframes slideDown {from {margin-top: -100%} 90% {margin-top: 10px}}
+/* end */
+
+/* header toolbar */
+header nav {padding: 1% 0}
+
+header .logo {margin: 0 3%}
+header .logo * {display: block}
+
+header nav,
+header ul.menu,
+header ul.submenu {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 1;
+}
+
+header .menu > li > a {
+  display: block;
+  letter-spacing: 1px;
+  font-weight: bold;
+  margin-right: 1em;
+  color: #aaa;
+  white-space: nowrap;
+}
+header .menu > li > a.selected {
+  color: #000;
+}
+header .submenu a {
+  display: block;
+  font-size: 12pt;
+  line-height: 1em;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: #000;
+  white-space: nowrap;
+}
+
+#tallMenu > .outerNav {
+  align-self: flex-end;
+}
+#tallMenu .menu {
+  font-size: 24pt;
+  line-height: 1em;
+  margin: 0px 0 15px 0;
+}
+#tallMenu .submenu a {
+  margin-right: 2em;
+}
+
+#thinMenu .menu {
+  font-size: 20pt;
+  line-height: 1em;
+}
+
+#openMenu {
+  overflow: auto;
+  max-height: 100vh;
+  align-items: flex-start;
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.3);
+}
+#openMenu ul.menu {
+  flex-flow: column;
+  align-items: stretch;
+}
+#openMenu ul.menu > li {
+  padding: 0.6em 1em;
+  border-bottom: 1px solid #bbb;
+}
+#openMenu ul.menu > li:last-child {
+  border-bottom: none;
+}
+#openMenu ul.menu > li > a {
+  font-size: 18pt;
+  color: #999;
+}
+#openMenu ul.submenu {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(8em, 1fr));
+  grid-gap: 0.5em 5px;
+  gap: 0.5em 5px;
+  flex: 1;
+  margin-top: 0.5em;
+}
+#openMenu ul.submenu > li > a::before {
+  content: "\02022";
+  padding-right: 0.5em;
+  color: #999;
+}
+/* end */
+
+main {
+  margin: 8em 0 3% 0;
+}
+@media (max-width: 850px) {
+  main {margin-top: 4em}
+}
+    </style>
+<!-- Google Analytics -->
+<script>
+try { if(localStorage["ga-out"] > 1) throw 2; }
+catch(e) { window["ga-disable-UA-50470471-1"] = true; }
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config","UA-50470471-1",{anonymize_ip:true});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-50470471-1"></script>
+<!-- Google Analytics -->
+</head>
   <body>
-    <h1>Coming soon!</h1>
+    <header class="mid">
+      <input id=menuBtn type=checkbox tabindex="-1">
+      <nav id=thinMenu>
+        <div class=logo><a href="https://www.th3.ca"><img src="logo_serif.png" width=38 height=47 alt=TH3></a></div>
+        <ul class=menu>
+          <li class=selected><a href="." class=selected>Headlines</a></li>
+          <li><a href="products/">Catalog</a></li>
+          <li><a href="technology/">Technology</a></li>
+        </ul>
+        <label for=menuBtn class=hamburger tabindex=0 role=button aria-label=Expand>&equiv;</label>
+      </nav>
+
+      <nav id=tallMenu>
+        <div class=logo><a href="https://www.th3.ca"><img src="logo_serif.png" width=76 height=94 alt=TH3></a></div>
+        <div class=outerNav>
+          <ul class=menu>
+            <li class=selected><a href="." class=selected>Headlines</a></li>
+            <li><a href="products/">Catalog</a></li>
+            <li><a href="technology/">Technology</a></li>
+          </ul>
+          <ul class=submenu>
+            <li><a href="#outdoors">Outdoors</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#fabrics">Fabrics</a></li>                
+          </ul>
+        </div>
+        <label for=menuBtn class=hamburger tabindex=0 role=button aria-label=Expand>&equiv;</label>
+      </nav>
+
+      <nav id=openMenu>
+        <div class=logo><a href="https://www.th3.ca"><img src="logo_serif.png" width=76 height=94 alt=TH3></a></div>
+        <ul class=menu>
+          <li class=selected>
+            <a href="." class=selected>Headlines</a>
+            <ul class=submenu>
+              <li><a href="#outdoors">Outdoors</a></li>
+              <li><a href="#categories">Categories</a></li>
+              <li><a href="#fabrics">Fabrics</a></li>                
+            </ul>
+          </li>
+
+          <li>
+            <a href="products/">Catalog</a>
+            <ul class=submenu>
+              <li><a href="products/#type=crop">Crop Tops</a></li>
+              <li><a href="products/#type=tank">Tank Tops</a></li>
+              <li><a href="products/#type=shirt">T-Shirts</a></li>
+              <li><a href="products/#type=sleeve">Long Sleeves</a></li>
+              <li><a href="products/#type=jack">Jackets</a></li>
+              <li><a href="products/#type=short">Shorts</a></li>
+              <li><a href="products/#type=cap">Capri Pants</a></li>
+              <li><a href="products/#type=pant">Pants</a></li>
+            </ul>  
+          </li>
+
+          <li>
+            <a href="technology/">Technology</a>
+            <ul class=submenu>
+              <li><a href="technology/#performance">Performance</a></li>
+              <li><a href="technology/#weight">Weight</a></li>
+              <li><a href="technology/#construction">Construction</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <label for=menuBtn class=hamburger tabindex=0 role=button>&times;</label>
+      </nav>
+    </header>
+
+    <main>
+      <style>
+.crsl {
+  position: relative;
+  margin: 1em 5%;
+}
+.crsl > input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+}
+.crsl > input:checked {display: none/*removes keyboard focus*/}
+.crsl > article {
+  display: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  height: 85vh;
+  padding: 0 5%;
+}
+@media (max-width: 900px) {
+  .crsl {margin: 1em 0}
+  .crsl > article {
+    background-size: cover;
+    background-position: 50%;
+    padding: 0;
+  }
+}
+
+.crsl > input:checked + article {display: block}
+
+#crsl_bg1 {background-image: url(carousel/top5001,pants5060.jpg); background-position: 55%}
+#crsl_bg2 {background-image: url(carousel/top6004,pants6077.jpg)}
+#crsl_bg3 {background-image: url(carousel/top5001,pants5060_2.jpg); background-position: 40%}
+#crsl_bg4 {background-image: url(carousel/top5001,pants5060_3.jpg); background-position: 40%}
+#crsl_bg5 {background-image: url(carousel/top5021,pants5062.jpg)}
+#crsl_bg6 {background-image: url(carousel/top5025,pants.jpg); background-position: 40%}
+#crsl_bg7 {background-image: url(carousel/top6008,pants6056.jpg)}
+#crsl_bg8 {background-image: url(carousel/top6010,pants6050.jpg); background-position: 60%}
+#crsl_bg9 {background-image: url(carousel/top6012,pants6051.jpg); background-position: 30%}
+#crsl_bg10 {background-image: url(carousel/top6039,pants6071.jpg)}
+@media (max-width: 500px) and (max-height: 736px) {
+  #crsl_bg1 {background-image: url(carousel/top5001,pants5060_v500.jpg)}
+  #crsl_bg2 {background-image: url(carousel/top6004,pants6077_v500.jpg)}
+  #crsl_bg3 {background-image: url(carousel/top5001,pants5060_2_v500.jpg)}
+  #crsl_bg4 {background-image: url(carousel/top5001,pants5060_3_v500.jpg)}
+  #crsl_bg5 {background-image: url(carousel/top5021,pants5062_v500.jpg)}
+  #crsl_bg6 {background-image: url(carousel/top5025,pants_v500.jpg)}
+  #crsl_bg7 {background-image: url(carousel/top6008,pants6056_v500.jpg)}
+  #crsl_bg8 {background-image: url(carousel/top6010,pants6050_v500.jpg)}
+  #crsl_bg9 {background-image: url(carousel/top6012,pants6051_v500.jpg)}
+  #crsl_bg10 {background-image: url(carousel/top6039,pants6071_v500.jpg)}
+}
+
+.crsl > input:not(:checked) + article + input:not(:checked) + article {background-image: none !important; /*network save*/}
+
+.crsl > article > div {
+  position: absolute;
+  left: 5%;
+  top: 20%;
+  width: 50%;
+  background: linear-gradient(90deg, #fff, transparent);
+  font-size: 40pt;
+  line-height: 1em;
+  padding: 0.3em;
+  border-radius: 15px;
+}
+.crsl > input:checked + article > div {animation: slideLeft 1.2s ease-out}
+@keyframes slideLeft {
+  from {margin-left: 40px; opacity: 0}
+}
+
+.crsl > article > nav {
+  position: absolute;
+  left: 5%;
+  top: 80%;
+  font: bold 50pt Arial;
+}
+.crsl > article > nav > label {
+  background: #fff;
+  border-radius: 10px;
+  padding: 0 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+    </style>
+      <section id=outdoors class=crsl>
+        <input id=crsl1 type=radio name=crsl tabindex="-1" checked> 
+        <article id=crsl_bg1>
+          <div>Helping you stay flexible.</div>
+          <nav>
+            <label for=crsl2 role=button>&roarr;</label>  
+          </nav>
+          <picture>
+            <source srcset="carousel/top5001,pants5060_v500.jpg" media="(max-width: 500px) and (max-height: 736px)">
+            <img src="carousel/top5001,pants5060.jpg" width=1 height=1 style="visibility: hidden">
+          </picture>
+        </article>
+
+        <input id=crsl2 type=radio name=crsl tabindex="-1"> 
+        <article id=crsl_bg2>
+          <div>Helping you stay on track.</div>
+          <nav>
+            <label for=crsl1 role=button>&loarr;</label>
+            <label for=crsl3 role=button>&roarr;</label>  
+          </nav>
+        </article>
+
+        <input id=crsl3 type=radio name=crsl tabindex="-1"> 
+        <article id=crsl_bg3>
+          <div>Helping you stay energized.</div>
+          <nav>
+            <label for=crsl2 role=button>&loarr;</label>
+            <label for=crsl4 role=button>&roarr;</label>  
+          </nav>
+        </article>
+
+        <input id=crsl4 type=radio name=crsl tabindex="-1"> 
+        <article id=crsl_bg4>
+          <div>Helping you stay focused.</div>
+          <nav>
+            <label for=crsl3 role=button>&loarr;</label>
+            <label for=crsl5 role=button>&roarr;</label>  
+          </nav>
+        </article>
+
+        <input id=crsl5 type=radio name=crsl tabindex="-1"> 
+        <article id=crsl_bg5>
+          <div>Helping you breathe... and relax.</div>
+          <nav>
+            <label for=crsl4 role=button>&loarr;</label>
+            <label for=crsl6 role=button>&roarr;</label>  
+          </nav>
+        </article>
+
+        <input id=crsl6 type=radio name=crsl tabindex="-1"> 
+        <article id=crsl_bg6>
+          <div>Helping you maintain posture.</div>
+          <nav>
+            <label for=crsl5 role=button>&loarr;</label>
+            <label for=crsl7 role=button>&roarr;</label>  
+          </nav>
+        </article>
+
+        <input id=crsl7 type=radio name=crsl tabindex="-1"> 
+        <article id=crsl_bg7>
+          <div>Uplifting spirits.</div>
+          <nav>
+            <label for=crsl6 role=button>&loarr;</label>
+            <label for=crsl8 role=button>&roarr;</label>  
+          </nav>
+        </article>
+
+        <input id=crsl8 type=radio name=crsl tabindex="-1"> 
+        <article id=crsl_bg8>
+          <div>Loving your form.</div>
+          <nav>
+            <label for=crsl7 role=button>&loarr;</label>
+            <label for=crsl9 role=button>&roarr;</label>  
+          </nav>
+        </article>
+
+        <input id=crsl9 type=radio name=crsl tabindex="-1"> 
+        <article id=crsl_bg9>
+          <div>Always. Ready for more.</div>
+          <nav>
+            <label for=crsl8 role=button>&loarr;</label>
+            <label for=crsl10 role=button>&roarr;</label>  
+          </nav>
+        </article>
+
+        <input id=crsl10 type=radio name=crsl tabindex="-1"> 
+        <article id=crsl_bg10>
+          <div>Never giving up.</div>
+          <nav>
+            <label for=crsl9 role=button>&loarr;</label>
+          </nav>
+        </article>
+      </section>
+
+      <style>
+.category {padding: 20px 10px}
+.category ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 10px;
+  gap: 10px;
+}
+.category ul > li {
+  max-width: 600px;
+}
+.category a {
+  display: flex;
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 36pt;
+  text-shadow: 1px 1px 5px #000;
+  border-radius: 20px;
+}
+#categories > h2 {margin: 2% 0 1em 0}
+      </style>
+      <section id=categories class=category>
+        <h2>Something for every occasion:</h2>
+        <ul>
+          <li>
+            <a href="products/#type=crop" style="background-image:url(cat_crops.jpg)">Crop Tops</a>
+          </li>
+          <li>
+            <a href="products/#type=tank" style="background-image:url(cat_tanks.jpg)">Tank Tops</a>
+          </li>
+          <li>
+            <a href="products/#type=shirt" style="background-image:url(cat_tshirts.jpg)">T-Shirts</a>
+          </li>
+          <li>
+            <a href="products/#type=sleeve" style="background-image:url(cat_lsleeves.jpg)">Long Sleeves</a>
+          </li>
+          <li>
+            <a href="products/#type=jack" style="background-image:url(cat_jackets.jpg)">Jackets</a>
+          </li>
+          <li>
+            <a href="products/#type=short" style="background-image:url(cat_shorts.jpg); background-position: 50% 100%">Shorts</a>
+          </li>
+          <li>
+            <a href="products/#type=cap" style="background-image:url(cat_capris.jpg)">Capri Pants</a>
+          </li>
+          <li>
+            <a href="products/#type=pant" style="background-image:url(cat_pants.jpg)">Pants</a>
+          </li>
+        </ul>
+      </section>
+
+      <style>
+#fabrics > h2 {margin: 2em 0 1em 0}
+#fabrics > article {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 4em;
+  gap: 4em;
+  align-items: flex-start;
+  margin: 0 5%;
+}
+#fabrics figure {
+  text-align: center;
+}
+#fabrics figcaption {
+  text-align: justify;
+  line-height: 1.5em;
+}
+#fabrics figcaption::first-letter {
+  font-size: 2em;
+}
+
+      </style>
+      <section id=fabrics>
+        <h2>Fabrics made for performance:</h2>
+        <article>
+          <figure>
+            <img src="teflon_perspire.jpg" width=214 height=177 alt="Perspiration">
+            <figcaption>
+            Moisture and perspiration collect around key stress points on your body. 
+            Wicking disperses that moisture away from the key stress points, so that 
+            your body can feel more balanced and comfortable.
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="teflon_clean.jpg" width=214 height=177 alt="Easy to clean">
+            <figcaption>
+            Our fabric is easier to clean than regular synthetic fabrics, affording you 
+            warm water washing effect using cold water. During laundering, water is 
+            attracted to our fabric, drawing the water deep within its fibers to wash 
+            out dirt.
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="teflon_breathe.jpg" width=214 height=177 alt="Breatheable">
+            <figcaption>
+            Many synthetic fabrics turn into an oven when they're wet. Our fabric 
+            evaporates moisture quickly allowing the fabric to resume breathing much 
+            quicker.
+            </figcaption>
+          </figure>
+
+        </article>
+      </section>
+
+      <style>
+#share {
+  text-align: center;
+  margin-top: 3em;
+}
+#share > a {margin: 0 15px}
+
+      </style>
+      <section id=share>
+        <a href="http://www.facebook.com/th3.ca"><img src=FB-RGB-500.svg width=42 height=42 alt=Facebook></a> 
+        <a href="https://www.instagram.com/th3yoga"><img src=glyph-logo_May2016.png width=40 height=40 alt=Instagram></a>
+        <a href="https://www.twitter.com/th3yoga"><img src=Twitter_Social_Icon_Circle_Color.svg width=40 height=40 alt=Twitter></a>
+      </section>
+    </main>
+
+    <style>
+/* footer menu */
+footer {
+  padding: 1em;
+  background: black;
+  font-size: 12pt;
+  line-height: 1.7em;
+  color: white;
+}
+footer nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+footer nav ul {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+footer nav details {
+  margin: 2% 3%;
+}
+footer nav summary {
+  font-size: 16pt;
+  margin-bottom: 0.7em;
+  font-weight: bold;
+}
+footer a {
+  color: white;
+}
+/* end */
+
+footer .fineprint {
+  font-size: 10pt;
+  line-height: 1.2em;
+  text-align: center;
+}
+    </style>
+
+    <footer>
+      <nav>
+        <details open>
+          <summary>Headlines</summary>
+          <ul>
+            <li><a href="#outdoors">Outdoors</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#fabrics">Fabrics</a></li>
+          </ul>
+        </details>
+
+        <details open>
+          <summary>Catalog</summary>
+          <ul>
+            <li><a href="products/#type=crop">Crop Tops</a></li>
+            <li><a href="products/#type=tank">Tank Tops</a></li>
+            <li><a href="products/#type=shirt">T-Shirts</a></li>
+            <li><a href="products/#type=sleeve">Long Sleeves</a></li>
+            <li><a href="products/#type=jack">Jackets</a></li>
+            <li><a href="products/#type=short">Shorts</a></li>
+            <li><a href="products/#type=cap">Capri Pants</a></li>
+            <li><a href="products/#type=pant">Pants</a></li>
+          </ul>
+        </details>
+
+        <details open>
+          <summary>Technology</summary>
+          <ul>
+            <li><a href="technology/#performance">Performance</a></li>
+            <li><a href="technology/#weight">Weight</a></li>
+            <li><a href="technology/#construction">Construction</a></li>
+          </ul>
+        </details>
+
+        <details open>
+          <summary>Company</summary>
+          <ul>
+            <li><a href="aboutus/">About Us</a></li>
+            <li><a href="mailto:press@th3ANTISPAM.ca">Press</a></li>
+            <li><a href="mailto:careers@th3ANTISPAM.ca">Careers</a></li>
+            <li><a href="privacy/">Privacy Policy</a></li>
+          </ul>
+        </details>
+
+      </nav>
+      <div class=fineprint>
+        Copyright &copy; 2007-2020 Euro Verve Company Limited, Ontario L3R 3W9, Canada. All rights reserved.
+        Lycra&copy; is a registered trademark of Invista.
+      </div>
+    </footer>
+    <style>
+#gdpr {
+  position: fixed;
+  bottom: 0;
+  left: 2%;
+  width: 96%;
+  padding: 5px 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 12pt;
+  line-height: 14pt;
+  background: #333;
+  color: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+#gdpr > p {margin: 10px}
+#gdpr > div {margin-right: 5px; text-align: center}
+#gdpr > div > button {
+  margin: 5px;
+  padding: 0.3em 1em;
+  background-color: #ddd;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+#gdpr > div > button:last-child {
+  background-color: #f88;
+}
+    </style>
+    <aside id=gdpr style="display: none">
+      <p>By using this website you agree to allow this website and its partners to collect non-sensitive information to deliver a better experience to you.</p>
+      <div><button onclick="setTracker(1);" type=button>Accept</button><button onclick="setTracker(2);" type=button>Decline</button></div>
+    </aside>
+    <script>
+try {
+  if(!(localStorage["ga-out"] > 0)) document.getElementById("gdpr").style.display = "";
+} catch(e) {console.log(e)}
+function setTracker(i) {
+  localStorage["ga-out"] = i;
+  document.getElementById("gdpr").style.display = "none";
+}
+    </script>
+    <script>
+(function(a,r,t) {for(var i=0;i<a.length;i++)a[i].href=a[i].href[r](t,"")})(document.querySelectorAll("footer a"),"replace","ANTISPAM");      
+    </script>
+    <script>
+(function(f) {
+  f = function(n, w, d) {
+    w = window;
+    d = document;
+    n = d.querySelector("header").classList;
+    if((w.scrollY || w.pageYOffset || d.body.scrollTop + (d.documentElement && d.documentElement.scrollTop || 0)) > 10) {
+      n.add("mid");
+      n.remove("top");
+    } else {
+      n.remove("mid");
+      n.add("top");
+    }
+  };
+  f();
+  try { window.addEventListener("scroll", f, {passive: true, capture: false}) }
+  catch(e) { window.addEventListener("scroll", f, false) }
+})();
+    </script>
+    <script>
+var interObs = window.IntersectionObserver && new IntersectionObserver(function(arr) {
+  for(var i = 0; i < arr.length; i++) {
+    arr[i].target.style.transform = (arr[i].isIntersecting && arr[i].intersectionRatio >= 0.5) ? "" : "scale(0.7)";
+  }
+}, {threshold: [0, 0.4, 0.6, 1]});
+
+document.querySelectorAll("#categories a, figure > img").forEach(function(n) {
+  n.style.transition = "transform 0.3s ease-out";
+  interObs.observe(n);
+});
+    </script>
   </body>
 </html>
